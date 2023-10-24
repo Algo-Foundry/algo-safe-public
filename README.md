@@ -8,10 +8,9 @@ Check out Algo Safe [here](https://safe.algofoundry.studio/)!
 
 1. Cloning the project
 
-- Visit the github repository at [https://github.com/Algo-Foundry/algo-safe](https://github.com/Algo-Foundry/algo-safe)
 - Clone to your local machine by using git clone or the Github GUI.
 
-2. Installing the packages
+1. Installing the packages
 
 - Navigate to the local cloned repository and run the following command.
 

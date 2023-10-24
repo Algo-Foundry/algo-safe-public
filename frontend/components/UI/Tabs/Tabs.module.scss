@@ -1,0 +1,100 @@
+.transactions-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wrapper-tab-menu {
+  position: relative;
+  display: flex;
+  width: 100%;
+  .tab-menu {
+    height: 42px;
+    cursor: pointer;
+    z-index: 1050;
+    width: 100%;
+    font-family: 'DIN Condensed';
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #B3B3B3;
+    
+    &:hover {
+      color: #616a77;
+    }
+    &.active {
+      color: #000000;
+    }
+    @media only screen and (min-width: 1600px) {
+      height: $px-42;
+      font-size: $px-24;
+      line-height: $px-29;
+    }
+  }
+
+  .border-bar {
+    position: absolute;
+    top: 39px;
+    height: 4px;
+    width: 100%;
+    background: #FFFFFF;
+    @media only screen and (min-width: 1600px) {
+      top: $px-39;
+      height: $px-4;
+    }
+  }
+
+  .glider-bar {
+    position: absolute;
+    top: unset;
+    bottom: -1px;
+    height: 4px;
+    background: #258BAC;
+    z-index: 99;
+    width: 100%;
+    transform-origin: 0 0;
+    transition: transform 0.25s;
+    @media only screen and (min-width: 1600px) {
+      bottom: $_px-1;
+      height: $px-4;
+    }
+  }
+
+  .tab-menu:first-child.active~.glider-bar {
+    transform: translateX(0) scaleX(0.5);
+  }
+
+  .tab-menu:nth-child(2).active~.glider-bar {
+    transform: translateX(50%) scaleX(0.5);
+  }
+}
+
+//mobile for subpage-only
+@media only screen and (max-width: 991px) {
+  .wrapper-tab-menu.subpage-version {
+    .tab-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      line-height: 150%;
+      // span {
+      //   height: 22px;
+      // }
+    }
+    .border-bar {
+      top: 0;
+      height: 100%;
+      background: linear-gradient(315deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #EDEEF2;
+      background-blend-mode: soft-light, normal;
+    }
+    .glider-bar {
+      bottom: unset;
+      top: 0;
+      height: 100%;
+      background: #8BD4E9;
+    }
+  }
+}

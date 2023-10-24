@@ -1,0 +1,87 @@
+.container {
+  p {
+    margin: 0;
+    font-family: "DM Sans";
+    font-size: 14px;
+  }
+
+  width: 100%;
+  background: white;
+  padding: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 20px;
+    border-radius: 0px !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    p {
+      font-size: $px-14 !important;
+    }
+
+    padding: $px-20;
+    padding-bottom: $px-20;
+    border-radius: $px-10;
+    margin-top: $px-10;
+  }
+}
+
+.titleWrapper {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #8BD4E9;
+
+  @media only screen and (min-width: 1600px) {
+    margin-bottom: $px-10;
+    padding-bottom: $px-10;
+    border-bottom: $px-2 solid #8BD4E9;
+  }
+}
+
+.titleHeader {
+  font-family: 'Poppins' !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px !important;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-18 !important;
+  }
+}
+
+.textBold {
+  font-weight: 700 !important;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-15;
+  }
+}
+
+.trxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-5;
+  }
+}
+
+.iconStyles {
+  width: 24px;
+  height: 24px;
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-24;
+    height: $px-24;
+  }
+}

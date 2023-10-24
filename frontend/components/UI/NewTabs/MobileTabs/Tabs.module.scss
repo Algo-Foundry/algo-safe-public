@@ -1,0 +1,89 @@
+.footer {
+  background: #ffffff;
+  box-shadow: -2px 0px 5px rgba(147, 147, 147, 0.25);
+  border-radius: 12px 12px 0px 0px;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 6px 20px 6px 20px;
+  height: 56px;
+
+  display: flex;
+  justify-content: space-between;
+  z-index: 101;
+}
+
+.badge-tx-mbl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -4px;
+  right: 16px;
+  width: 14px;
+  height: 14px;
+  background: #8bd4e9;
+  border-radius: 4px;
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  color: #ffffff;
+  padding-top: 1px;
+}
+
+.badgeWarn {
+  position: absolute;
+  top: -11px;
+  right: 14px;
+  color: #e15173;
+}
+
+.badgeWarn svg {
+  width: 16px;
+  height: 16px;
+}
+.footer > button {
+  display: unset;
+}
+
+.spacing {
+  height: 80px;
+}
+
+.btn-text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.ptxnNumBox {
+  display: flex;
+  position: relative;
+  top: -60px;
+  left: 15px;
+  background-color: #e0869c;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 22px;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+
+  &.active {
+    background-color: #d35272;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer, .spacing {
+    display: none;
+  }
+}

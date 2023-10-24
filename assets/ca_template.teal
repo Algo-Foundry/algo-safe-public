@@ -1,0 +1,68 @@
+#pragma version 6
+
+// Main functionalities will be at the bottom
+b main
+
+hdl_undo_rekey:
+    // Close Remainder
+    // The "rmv_p" call will validate the close remainder to
+    gtxn 2 TypeEnum
+    int pay
+    ==
+    gtxn 2 Amount
+    int 0
+    ==
+    &&
+    gtxn 2 Sender
+    gtxn 2 Receiver
+    ==
+    &&
+    gtxn 1 TypeEnum
+    int appl
+    ==
+    &&
+    gtxn 1 ApplicationID
+    int <SAFE_ID>
+    ==
+    &&
+    gtxna 1 ApplicationArgs 0
+    byte "rmv_p"
+    ==
+    &&
+    bnz finish
+
+    b reject
+
+reject:
+    int 0
+    return
+
+finish:
+    int 1
+    return
+
+main:
+
+    // Handle Undo Rekey
+    global GroupSize
+    int 3
+    ==
+    gtxn 0 TypeEnum
+    int pay
+    ==
+    &&
+    gtxn 0 Sender
+    addr <SAFE_ADDRESS>
+    ==
+    &&
+    gtxn 0 Receiver
+    addr <SAFE_ADDRESS>
+    ==
+    &&
+    gtxn 0 RekeyTo
+    addr <SAFE_ADDRESS>
+    ==
+    &&
+    bnz hdl_undo_rekey
+    
+    // Template Start Here

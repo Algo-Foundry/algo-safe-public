@@ -1,0 +1,94 @@
+.address-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 160%;
+  color: #000000;
+
+  b {
+    margin-right: 4px;
+  }
+
+  a {
+    width: 16px;
+    height: 16px;
+    position: relative;
+  }
+
+  span {
+    font-size: 14px;
+    word-break: break-all;
+    text-align: left;
+  }
+
+  .mb-sm {
+    margin-bottom: -4px;
+  }
+}
+
+.mtAddr {
+  margin-top: 2px !important;
+
+  @media only screen and (min-width: 1600px) {
+    margin-top: $px-2 !important;
+  }
+}
+
+.row-flex {
+  flex-direction: row !important;
+}
+
+.column-flex {
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1200px) {
+  .address-group {
+    gap: 6px;
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .mobile-visible {
+    display: none !important;
+  }
+
+  .desktop-visible {
+    font-size: 14px !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .desktop-visible {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .address-group {
+    gap: $px-6;
+    font-size: $px-14;
+    line-height: $px-15;
+
+    b {
+      margin-right: $px-4;
+    }
+
+    a {
+      width: $px-16;
+      height: $px-16;
+      position: relative;
+    }
+
+    .mb-sm {
+      margin-bottom: $_px-4;
+    }
+
+    span {
+      font-size: $px-12 !important;
+    }
+  }
+}

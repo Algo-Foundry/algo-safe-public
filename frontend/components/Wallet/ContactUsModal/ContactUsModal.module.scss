@@ -1,0 +1,320 @@
+.modalContainer{
+  width: 500px;
+  @media only screen and (min-width: 1600px) {
+    width: $px-500;
+  }
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 767px) {
+    max-height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+}
+.noOverflow{
+  overflow-y: unset;  
+}
+.pHeader{
+  padding-bottom: 18px;
+  @media only screen and (min-width: 1600px) {
+    padding-bottom: $px-18;
+  }
+  @media only screen and (max-width: 991px) {
+    padding: 0 20px 15px;
+  }
+}
+.modal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-family: DM Sans;
+  margin-top: 7px;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-16;
+    margin-top: $px-7;
+  }
+
+  @media only screen and (max-width: 991px) {
+    gap: 10px;
+    padding: 0 20px;
+  }
+}
+
+.titleModal{
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-18;
+  }
+  @media only screen and (max-width: 991px) {
+    justify-content: flex-start;
+    font-size: 14px;
+  }
+}
+
+.inputContact{
+  gap: 6px;
+  position: relative;
+  label{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+  }
+  span{
+    color: #258BAC;
+  }
+  textarea{
+      min-height: 86px;     
+      padding: 10px 14px;       
+  }
+  @media only screen and (min-width: 1600px) {
+    gap: $px-6;
+    label{
+      font-size: $px-14;
+    }
+    textarea{
+        min-height: $px-86;     
+        padding: $px-10 $px-14;       
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    label{
+      font-size: 12px;
+    }
+  }
+}
+
+.textFail{
+  position: absolute;
+  left: 0;
+  top: 99%;
+  color: red !important;
+  font-size: 10px;
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-10;
+  }
+}
+
+.wrapInput{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  .smallBox{
+      width: 175px;
+  }
+  .wFlex{
+      flex-grow: 1;
+      width: unset;
+  }
+  @media only screen and (min-width: 1600px) {
+    gap: $px-16;
+    .smallBox{
+        width: $px-175;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    gap: 10px;
+    flex-direction: column;
+    .smallBox{
+        width: 100%;
+    }
+    .wFlex{
+        flex-grow: 1;
+        width: 100%;
+    }
+  }
+}
+
+.boxDropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+.btnDropdown{
+  border-radius: 8px;
+  background:  #E6F7FB;
+  display: flex;
+  height: 40px;
+  padding: 10px 15px;
+  color: #B3B3B3;  
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  position: relative;    
+  @media only screen and (min-width: 1600px) {
+    border-radius: $px-8;
+    height: $px-40;
+    padding: $px-10 $px-15;
+    font-size: $px-14;
+  }
+  span{
+    color: #B3B3B3;  
+    &.darker{
+      color: #000000;  
+    }
+  }
+  .boxArrow{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform .4s ease-in-out;
+    color: #000000;
+    &.activeDr{
+      transform: translateY(-50%) rotate(180deg);
+    }
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+    @media only screen and (min-width: 1600px) {
+      right: $px-15;
+      svg{
+        width: $px-20;
+        height: $px-20;
+      }
+    }
+  }
+  
+}
+.dropdownMedia {
+  cursor: pointer;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 8px 0px rgba(92, 92, 92, 0.30);
+  border-radius: 8px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 3px);
+  z-index: 1;
+
+  .wrapTextBtn {
+    display: flex;
+    height: 42px;
+    padding: 0 14px;
+    align-items: center;
+    gap: 10px;
+    color: #000000;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    &:hover, &.active{
+      background: #E6F7FB;
+    }    
+  }
+
+  @media only screen and (min-width: 1600px) {
+    box-shadow: 0 0 $px-8 0 rgba(92, 92, 92, 0.30);
+    border-radius: $px-8;
+    top: calc(100% + $px-3);
+    .wrapTextBtn {
+      height: $px-42;
+      padding: 0 $px-14;
+      gap: $px-10;
+      font-size: $px-14;    
+    }
+  }
+}
+.btnSave{
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 21px */
+  text-transform: uppercase;
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+  }
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+  }
+}
+.modal-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #000000;
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans';
+    font-size: 14px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-16;
+
+    p {
+      font-size: $px-14;
+    }
+  }
+}
+
+.modal-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #8BD4E9;
+  width: 100%;
+  padding-top: 20px;
+  @media only screen and (min-width: 1600px) {
+    border-top: $px-1 solid #8BD4E9;
+    padding-top: $px-20;
+  }
+}
+
+.formCheck{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  width: 100%;
+  @media only screen and (min-width: 1600px) {
+    gap: $px-8;
+  }
+  label{
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+      @media only screen and (max-width: 991px) {
+          font-size: 12px;
+      }
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-14;
+      }
+  }  
+  .checkboxInput {
+    width: 20px;
+    height: 20px;
+  
+    @media only screen and (min-width: 1600px) {
+      width: $px-20;
+      height: $px-20;
+    }
+  }
+}

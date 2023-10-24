@@ -1,0 +1,217 @@
+.btnGoToSafe {
+  width: 100% !important;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-family: Poppins !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+    letter-spacing: 0px !important;
+  }
+}
+
+.modalTx {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  .iconModal {
+    width: 100px;
+    height: 100px;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-100;
+      height: $px-100;
+    }
+  }
+
+  .wrapText {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    width: 100%;
+  }
+
+  .textModal {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #000000;
+    overflow-wrap: break-word;
+
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14;
+    }
+
+    &.big {
+      font-size: 14px;
+
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-14;
+      }
+    }
+
+    p {
+      margin: 0 !important;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+
+      @media only screen and (min-width: 1600px) {
+        width: $px-16;
+        height: $px-16;
+      }
+    }
+  }
+
+  .bold {
+    font-weight: 700;
+    max-width: max-content;
+    overflow-wrap: break-word;
+  }
+
+  .collapse {
+    color: #258BAC;
+    cursor: pointer;
+    text-decoration: underline;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-top: -3px;
+
+      &.rotate {
+        transform: rotate(180deg);
+      }
+
+      @media only screen and (min-width: 1600px) {
+        width: $px-20;
+        height: $px-20;
+        margin-top: $_px-3;
+      }
+    }
+  }
+
+  .txContent {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (min-width: 1600px) {
+      margin-top: $px-20;
+      gap: $px-4;
+    }
+  }
+
+  .errorDetailsWrapper {
+    margin-top: 10px;
+    width: 100%;
+    padding: 16px;
+
+    background: $blue-5;
+    border-radius: 12px;
+
+    @media only screen and (min-width: 1600px) {
+      margin-top: $px-10;
+      padding: $px-16;
+      border-radius: $px-12;
+    }
+  }
+
+  .errorDetails {
+    max-height: 312px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    word-break: break-word;
+
+    @media only screen and (min-width: 1600px) {
+      max-height: $px-312;
+      gap: $px-10;
+      font-size: $px-14;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .modalSafeCont {
+    .textModal {
+      text-align: center;
+    }
+  }
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btnProceed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+  background: #E15173;
+  box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+  border-radius: 8px;
+  border: none;
+
+  .text {
+    font-family: 'Poppins' !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px !important;
+    margin: 0 !important;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+
+.btnCancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+  background: #fff;
+  border-radius: 8px;
+  border: none;
+
+  .text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 !important;
+    text-align: center;
+    color: #000;
+  }
+}

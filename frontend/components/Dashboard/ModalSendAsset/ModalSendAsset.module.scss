@@ -1,0 +1,651 @@
+.modal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  overflow: hidden;
+
+  .modal-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20;
+    font-size: $px-14;
+  }
+
+  .inputNft {
+    text-align: center;
+    width: 100px;
+    border-radius: 0;
+    height: 40px;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-100;
+      height: $px-40;
+    }
+  }
+
+  .btnMinus,
+  .btnPlus {
+    min-width: 30px;
+    width: 30px;
+    height: 40px;
+    box-shadow: none;
+
+    @media only screen and (min-width: 1600px) {
+      min-width: $px-30;
+      width: $px-30;
+      height: $px-40;
+    }
+
+    &:disabled {
+      box-shadow: none;
+      background: #808689 !important;
+    }
+  }
+
+  .btnMinus {
+    border-radius: 8px 0 0 8px;
+
+    @media only screen and (min-width: 1600px) {
+      border-radius: $px-8 0 0 $px-8;
+    }
+  }
+
+  .btnPlus {
+    border-radius: 0 8px 8px 0;
+
+    @media only screen and (min-width: 1600px) {
+      border-radius: 0 $px-8 $px-8 0;
+    }
+  }
+
+  .textNfts {
+    margin-left: 14px;
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+
+    @media only screen and (min-width: 1600px) {
+      margin-left: $px-14;
+    }
+  }
+
+  .borderLine {
+    display: flex;
+    align-items: center;
+    gap: 8px !important;
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-8 !important;
+
+      svg {
+        width: $px-12;
+        height: $px-12;
+      }
+    }
+  }
+
+  .boxInputAsset {
+    label {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 160%;
+      font-family: 'DM Sans';
+
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-14;
+      }
+    }
+
+    input {
+      font-size: 14px;
+
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-14;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    gap: 6px;
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-6;
+    }
+  }
+
+  .infoToken {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--foundry-safe-5, #E6F7FB);
+    background: var(--foundry-safe-5, #E6F7FB);
+    box-shadow: -1px -1px 4px 0px rgba(139, 139, 139, 0.10) inset;
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-10;
+      padding: $px-10;
+      border-radius: $px-8;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+    }
+
+    .right-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      gap: 8px;
+    }
+
+    div {
+      font-size: 0.875rem;
+      font-family: DM Sans;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-12;
+      }
+    }
+
+    .title {
+      font-size: 14px;
+      font-family: DM Sans;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%;
+      color: #000000;
+
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-14;
+      }
+    }
+
+    .fontSmall{
+      font-size: 12px;
+
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-12;
+      }
+    }
+    .verifIcon{
+      width: 16px;
+      height: 16px;
+      position: relative;
+      @media only screen and (min-width: 1600px) {
+        width: $px-16;
+        height: $px-16;
+      }
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-family: DM Sans;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+      opacity: 0.5;
+      color: #000000;
+
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-14;
+      }
+    }
+
+    .imgToken {
+      width: 20px;
+      height: 20px;
+
+      @media only screen and (min-width: 1600px) {
+        width: $px-20;
+        height: $px-20;
+      }
+    }
+  }
+
+  a {
+    width: 16px;
+    height: 16px;
+    position: relative;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-16;
+      height: $px-16;
+    }
+  }
+
+  .infoBalanceToken {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 160%;
+    color: #000000;
+  }
+
+  a {
+    width: 16px;
+    height: 16px;
+    position: relative;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-16;
+      height: $px-16;
+    }
+  }
+
+  .infoBalanceToken {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 160%;
+    color: #000000;
+  }
+
+  .btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .btn {
+      width: 100%;
+      min-height: 40px;
+
+      @media only screen and (min-width: 768px) {
+        width: auto;
+        min-height: 36px;
+      }
+    }
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-10;
+
+      .btn {
+        min-height: $px-36;
+      }
+    }
+  }
+}
+
+.option-asset {
+  display: flex;
+  gap: 6px;
+
+  .asset-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-6;
+
+    .asset-icon {
+      width: $px-20;
+      height: $px-20;
+    }
+  }
+}
+
+.iconWrapper {
+  width: 14px;
+  height: 14px;
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-14;
+    height: $px-14;
+  }
+}
+
+.arrow-right {
+  cursor: pointer;
+  width: fit-content;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    svg {
+      width: $px-20;
+      height: $px-20;
+    }
+  }
+}
+.inputAddress{
+  padding-right: 44px;
+  @media only screen and (min-width: 1600px) {
+    padding-right: $px-44;
+  }
+}
+.iconAddress{
+  position: absolute;
+  right: 14px;
+  top: 6px;
+  color: #258BAC;
+  svg{
+    width: 20px;
+    height: 20px;
+  }
+  @media only screen and (min-width: 1600px) {
+    right: $px-14;
+    top: $px-6;    
+    svg{
+      width: $px-20;
+      height: $px-20;
+    }
+  }
+}
+.tooltip-container {
+  margin-top: -2px;
+
+  @media only screen and (min-width: 1600px) {
+    margin-top: $_px-2;
+
+    svg {
+      width: $px-16;
+      height: $px-17;
+    }
+  }
+}
+
+.help-icon {
+  color: $grey-1;
+}
+
+.help-icon:hover {
+  color: $blue-2;
+}
+
+.modal-custom-body {
+  margin: 0 -20px;
+  padding-top: 20px;
+  padding-right: 0;
+  @media only screen and (max-width: 768px) {
+    margin: 0;
+  }
+}
+
+.modal-header {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.modal-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 400px;
+  padding: 0 20px;
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans';
+    font-size: 14px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20;
+    max-height: $px-400;
+
+    p {
+      font-size: $px-14;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.modal-footer {
+  padding: 0 20px;
+
+  @media only screen and (min-width: 1600px) {
+    padding: 0 $px-20;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+
+.checkbox {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  width: 338px !important;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-6;
+    width: $px-342 !important;
+  }
+
+  .checkbox-input {
+    height: 18px !important;
+    width: 18px !important;
+    border: 1px solid #000000 !important;
+
+    @media only screen and (min-width: 1600px) {
+      height: $px-18 !important;
+      width: $px-18 !important;
+      border: $px-2 solid #000000 !important;
+    }
+  }
+
+  input[type=checkbox] {
+    accent-color: #000000;
+  }
+
+  label {
+    color: #000000;
+    font-size: 14px;
+    line-height: 160%;
+
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14;
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 13.7px;
+    }
+  }
+}
+
+.warning-message {
+  border: 1px solid #EC7100;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-size: 14px;
+  line-height: 160%;
+  color: #EC7100;
+  min-width: 338px;
+
+  ul {
+    padding-left: 20px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    border: $px-2 solid #EC7100;
+    border-radius: $px-8;
+    padding: $px-6 $px-8;
+    font-size: $px-14;
+    min-width: $px-338;
+
+    ul {
+      padding-left: $px-20;
+    }
+  }
+}
+
+.ledgerContent {
+  display: flex;
+  align-content: center;
+  margin-bottom: 20px;
+
+  p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #258BAC;
+  }
+
+  .imgWrapper {
+    width: 60px;
+    height: 60px;
+    position: relative;
+  }
+
+  .textDesc {
+    margin-left: 5px;
+    width: 272px;
+    height: 60px;
+
+    p {
+      margin: 0 !important;
+    }
+  }
+
+  .textBold {
+    font-weight: 700;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    p {
+      font-size: $px-14;
+    }
+
+    .imgWrapper {
+      width: $px-60;
+      height: $px-60;
+    }
+
+    .textDesc {
+      margin-left: $px-5;
+      width: $px-272;
+      height: $px-60;
+    }
+  }
+}
+
+.token-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.62rem;
+  height: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0px;
+
+  @media only screen and (min-width: 1600px) {
+    height: $px-240;
+  }
+}
+
+.arrow-left {
+  height: auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.boxSearch {
+  gap: 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: #AFB8C5;
+
+  svg {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-20;
+      height: $px-20;
+      left: $px-25;
+    }
+  }
+}
+
+.inputSearch {
+  font-size: 14px;
+  line-height: 160%;
+  padding: 9px 12px 9px 46px;
+  color: #AFB8C5;
+  width: 100%;
+  height: 40px;
+
+  @media only screen and (min-width: 1600px) {
+    padding: $px-9 $px-12 $px-9 $px-32;
+    font-size: $px-14 !important;
+    height: $px-40;
+  }
+}
+
+.nft-image-wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 2.5rem;
+    height: 109%;
+  }
+
+  .nftBlur {
+    width: 100%;
+    height: 100%;
+    background: #6F6F6FB2;
+    position: absolute;
+  }
+}

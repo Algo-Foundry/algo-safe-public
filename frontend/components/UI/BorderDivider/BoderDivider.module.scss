@@ -1,0 +1,99 @@
+.BorderDivider {
+  align-self: stretch;
+  position: relative;
+  border-bottom: 1px solid #8bd4e9;
+  box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.25);
+  @media only screen and (min-width: 1600px) {
+    border-bottom: $px-1 solid #8bd4e9;
+    box-shadow: 0px $_px-1 $px-10 rgba(255, 255, 255, 0.25);
+  }
+}
+
+.BorderDivider.vertical {
+  border-left: 1px solid #8bd4e9;
+  border-bottom: none;
+  &::after {
+    border-left: 1px solid #dde2e6;
+    border-bottom: none;
+    top: 0;
+  }
+  @media only screen and (min-width: 1600px) {
+    border-left: $px-1 solid #8bd4e9;
+    &::after {
+      border-left: $px-1 solid #dde2e6;
+    }
+  }
+}
+
+.BorderDivider.responsive {
+  border-left: none;
+  border-bottom: 1px solid #8bd4e9;
+  &::after {
+    border-left: none;
+    border-bottom: 1px solid #dde2e6;
+    top: 1px;
+  }
+  @media only screen and (min-width: 992px) {
+    border-left: 1px solid #8bd4e9;
+    border-bottom: none;
+    &::after {
+      border-left: 1px solid #dde2e6;
+      border-bottom: none;
+      top: 0;
+    }
+  }
+  @media only screen and (min-width: 1600px) {
+    border-bottom: $px-1 solid #8bd4e9;
+    &::after {
+      border-bottom: $px-1 solid #dde2e6;
+      top: $px-1;
+    }
+  }
+}
+
+.BorderDivider.grey {
+  border-bottom: 1px solid #c7cad2;
+  &::after {
+    border-bottom: 1px solid #dde2e6;
+  }
+  @media only screen and (min-width: 1600px) {
+    border-bottom: $px-1 solid #c7cad2;
+    &::after {
+      border-bottom: $px-1 solid #dde2e6;
+    }
+  }
+}
+
+.BorderDivider.red {
+  border-bottom: 1px solid #e15173;
+  border-left: 1px solid #e15173;
+  &::after {
+    border-bottom: 1px solid #ecc0ca;
+    border-left: 1px solid #ecc0ca;
+  }
+  @media only screen and (min-width: 1600px) {
+    border-bottom: $px-1 solid #e15173;
+    border-left: $px-1 solid #e15173;
+    &::after {
+      border-bottom: $px-1 solid #ecc0ca;
+      border-left: $px-1 solid #ecc0ca;
+    }
+  }
+}
+
+.BorderDivider.orange {
+  border-bottom: 1px solid #f69134;
+  border-left: 1px solid #f69134;
+  &::after {
+    border-bottom: 1px solid #ecc0ca;
+    border-left: 1px solid #ecc0ca;
+  }
+  @media only screen and (min-width: 1600px) {
+    border-bottom: $px-1 solid #f69134;
+    border-left: $px-1 solid #f69134;
+    &::after {
+      border-bottom: $px-1 solid #ecc0ca;
+      border-left: $px-1 solid #ecc0ca;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.review-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &.noShadow {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .textContent {
+        font-family: $font-regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #000000;
+
+        &.bold,
+        .bold {
+            font-weight: 700;
+            text-align: center;
+
+            &.blue {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .review-cont {
+        min-width: unset;
+        width: 100%;
+        padding: 0 0 20px;
+
+        .textContent {
+            font-size: 12px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .review-cont {
+
+        .textContent {
+            font-size: $px-14;
+
+            &.maxBox {
+                max-width: $px-170;
+            }
+        }
+    }
+}

@@ -1,0 +1,377 @@
+.review-detail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 12px;
+
+    &.mBottom {
+        margin-bottom: 20px;
+    }
+
+    .boxContent {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .wrapReadOnly {
+        padding: 2px 10px;
+        gap: 8px;
+        width: 69px;
+        height: 21px;
+        background: linear-gradient(315deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #C9CBD3;
+        background-blend-mode: soft-light, normal;
+        border-radius: 30px;
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .boxOwner {
+        width: 100%;
+        min-height: 100px;
+        display: flex;
+        align-items: stretch;
+        gap: 20px;
+
+        .wrapSide {
+            height: 100%;
+            flex: 50%;
+            display: flex;
+            flex-direction: column;
+
+            .boxTitle {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 12px;
+
+                &.top {
+                    padding-bottom: 12px;
+                    margin-top: 0;
+                    border-bottom: 1.5px solid #8BD4E9;
+                    box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.25);
+                }
+            }
+        }
+    }
+
+    .totalWrap {
+        margin-left: auto;
+    }
+
+    .feesWrap {
+        flex-direction: row;
+    }
+
+    .txWrap {
+        display: flex;
+        align-items: center;
+
+        .mlTx1 {
+            margin-left: 10px;
+        }
+
+        .mlTx2 {
+            margin-left: 5px;
+            font-family: 'DM Sans' !important;
+            text-align: right;
+        }
+
+        .txWidth1 {
+            width: 250px;
+            text-align: left !important;
+        }
+
+        .txWidth2 {
+            margin-left: auto;
+            align-items:end;
+            text-align: right !important;
+        }
+        .input{
+            text-align: right;
+        }
+    }
+
+    .feesContainer {
+        padding-right: 20px;
+    }
+
+    .feesContainer:nth-child(2) {
+        border-left: 2px solid #8BD4E9;
+        padding-right: 0px;
+        padding-left: 20px;
+    }
+
+    .textContent {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #000000;
+
+        img {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        &.bold,
+        .bold {
+            font-weight: 700;
+            text-align: center;
+
+            &.blue {
+                color: $primary-color;
+            }
+        }
+
+        &.maxBox {
+            max-width: 170px;
+        }
+
+        .detail {
+            font-weight: 400;
+            font-size: 11px;
+            color: #B3B3B3;
+        }
+    }
+
+    .button {
+        margin-top: 20px;
+        align-self: center;
+        width: 280px;
+    }
+}
+
+.borderRed {
+    border: 1px solid #E15173 !important;
+}
+
+.link {
+    color: #258BAC;
+    text-decoration: underline;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.d-desk-none {
+    display: none !important;
+}
+.cancelbtn {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 7.5px auto;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    line-height: 150%;
+    border: none;
+    min-width: 100px;
+    @media only screen and (min-width: 1600px) {
+        min-width: $px-100;
+        min-height: $px-36;
+        gap: $px-5;
+        padding: $px-7_5 auto;
+        border-radius: $px-8;
+        font-size: $px-14;
+    }
+  }
+  
+@media only screen and (max-width: 991px) {
+    .review-detail {
+        min-width: unset;
+        width: 100%;
+        border-radius: 0;
+
+        .textContent {
+            font-size: 12px;
+        }
+
+        .boxOwner {
+            flex-direction: column;
+
+            .wrapSide {
+                .boxTitle {
+                    &.topMob {
+                        box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.25);
+
+                        &:first-child {
+                            padding-top: 16px;
+                        }
+
+                        &:last-child {
+                            padding-bottom: 16px;
+                            border-bottom: 1px solid #8BD4E9;
+                        }
+                    }
+
+                    &.top {
+                        padding-bottom: 16px;
+                        margin-top: 0;
+                        border-bottom: 1px solid #8BD4E9;
+                        box-shadow: unset;
+
+                        &.paddingLess {
+                            padding-bottom: 8px;
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .feesWrap {
+            flex-direction: column;
+        }
+
+        .feesContainer {
+            width: 100% !important;
+            padding-right: 0px;
+        }
+
+        .feesContainer:nth-child(2) {
+            margin-top: 0.5rem;
+            border-left: 0px;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        .totalWrap {
+            margin-left: 0;
+            width: 100% !important;
+        }
+
+        .txWrap {
+            .txWidth1 {
+                width: 100%;
+            }
+
+            .txWidth2 {
+                text-align: right !important;
+                width: 100%
+            }
+
+            .mlTx2 {
+                margin-left: 10px;
+            }
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    .d-mob-none {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .review-detail {
+        gap: $px-20;
+        padding: $px-20;
+        border-radius: $px-12;
+
+        &.mBottom {
+            margin-bottom: $px-20;
+        }
+
+        .boxContent {
+            gap: $px-20;
+        }
+
+        .wrapReadOnly {
+            padding: $px-2 $px-10;
+            gap: $px-8;
+            width: $px-69;
+            height: $px-21;
+            border-radius: $px-30;
+            font-size: $px-12;
+        }
+
+        .boxOwner {
+            min-height: $px-100;
+            box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.25);
+            gap: $px-20;
+
+            .wrapSide {
+                .boxTitle {
+                    margin-top: $px-12;
+
+                    &.top {
+                        padding-bottom: $px-12;
+                        margin-top: 0;
+                        border-bottom: $px-1 solid #8BD4E9;
+                        box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.25);
+                    }
+                }
+            }
+        }
+
+        .txWrap {
+            .mlTx1 {
+                margin-left: $px-10;
+            }
+
+            .mlTx2 {
+                margin-left: $px-5;
+                text-align: right !important;
+            }
+
+            .txWidth1 {
+                width: $px-250;
+            }
+
+            .txWidth2 {
+                margin-left: auto;
+            }
+        }
+
+        .textContent {
+            font-size: $px-14;
+
+            &.maxBox {
+                max-width: $px-170;
+            }
+
+            img {
+                width: $px-16;
+                height: $px-16;
+            }
+
+            .detail {
+                font-size: $px-11;
+            }
+        }
+
+        .feesContainer {
+            padding-right: $px-20;
+        }
+
+        .feesContainer:nth-child(2) {
+            padding-left: $px-20;
+        }
+    }
+
+    .borderRed {
+        border: $px-1 solid #E15173 !important;
+    }
+
+    .link {
+        margin: 0 $px-3;
+    }
+}

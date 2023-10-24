@@ -1,0 +1,43 @@
+.btn-header {
+  font-family: $font-din-condensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #FFFFFF !important;
+  padding: 0;
+  outline: none;
+  border: none;
+  &:hover {
+    color: #B8E9F4 !important;
+  }
+  a {
+    &:hover {
+      color: #B8E9F4 !important;
+    }
+  }
+
+  
+  @media only screen and (min-width: 992px) {    
+    height: 25px;
+    font-size: 24px;
+    color: #FFFFFF !important;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    span {
+      height: 22px;
+    }
+  }
+
+  @media only screen and (min-width: 1600px) {
+    height: $px-25;
+    font-size: $px-24;
+    span {
+      height: $px-22;
+    }
+  }
+}

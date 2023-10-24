@@ -1,0 +1,58 @@
+.master-contract-detail {
+  background: #FFFFFF;
+  align-self: flex-start;
+  width: 100%;
+  margin-top: 20px;
+
+  @media only screen and (min-width: 1600px) {
+    margin-top: $px-20;
+  }
+
+  .box-info {
+    font-family: $font-regular;
+    font-size: 12px;
+    line-height: 160%;
+
+    border: 2px solid #B3B3B3;
+    border-radius: 8px;
+    padding: 14px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 992px) {
+      font-size: 14px;
+    }
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-12;
+      border: $px-2 solid #B3B3B3;
+      border-radius: $px-8;
+      padding: $px-14;
+      margin-top: $px-20;
+    }
+  }
+  
+  .master-id {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    @media only screen and (min-width: 1600px) {
+      gap: $px-8;
+      font-size: $px-14;
+      margin-top: $px-20;
+      padding-bottom: $px-20;
+    }
+    .box-icon-sm{
+      width: 16px;
+      height: 16px;
+      position: relative;
+      @media only screen and (min-width: 1600px) {
+        width: $px-16;
+        height: $px-16;
+      }      
+    }
+  }
+}

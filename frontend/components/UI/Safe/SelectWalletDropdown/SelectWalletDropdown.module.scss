@@ -1,0 +1,251 @@
+.parent {
+  position: relative;
+  width: 100%;
+
+  .btnConnect {
+    width: 100% !important;
+    height: 40px;
+    font-family: 'Poppins' !important;
+    font-size: 14px !important;
+    font-weight: 600;
+    padding: 11px 5px !important;
+
+    @media only screen and (min-width: 1600px) {
+      height: $px-40;
+      font-size: $px-14 !important;
+      padding: $px-11 $px-5 !important;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+.content {
+  border-radius: 8px;
+  background: #E6F7FB;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px 8px 10px;
+
+  @media only screen and (max-width: 991px) {
+    padding: 8px 10px 8px 10px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    min-height: $px-36;
+    gap: $px-5;
+    padding: $px-8 $px-10 $px-8 $px-10;
+    border-radius: $px-10;
+    font-size: $px-14;
+  }
+}
+
+.leftContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 20px;
+    height: 20px;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-20;
+      height: $px-20;
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+      margin: 0 !important;
+    }
+  }
+}
+
+
+.boxLink {
+  padding: 10px 14px;
+
+  @media only screen and (min-width: 1600px) {
+    padding: $px-10 $px-14;
+
+  }
+}
+
+.textlink {
+  text-decoration-line: underline;
+  color: #258BAC !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}
+
+.walletValue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+
+  p {
+    font-family: "DM Sans" !important;
+    margin: 0 !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-5;
+    margin-left: $px-10;
+  }
+}
+
+.walletTextBold {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #0F1A4F;
+  font-family: 'DM Sans';
+  font-style: normal;
+  margin: 0;
+
+  @media only screen and (max-width: 991px) {
+    font-size: 12px !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+  }
+}
+
+.walletTextAddr {
+  font-size: 14px;
+  font-weight: 400 !important;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+  }
+
+  @media only screen and (max-width: 991px) {
+    font-size: 12px !important;
+  }
+}
+
+.itemContainer {
+  position: absolute;
+  top: 110%;
+  z-index: 2;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  @media only screen and (min-width: 1600px) {
+    box-shadow: 0px $px-4 $px-10 rgba(0, 0, 0, 0.1);
+    border-radius: $px-10;
+  }
+}
+
+.itemContent {
+  background-color: #fff;
+  border-radius: 10px;
+
+  @media only screen and (min-width: 1600px) {
+    border-radius: $px-10;
+  }
+}
+
+.item {
+  cursor: pointer;
+  padding: 7px 10px 7px 10px;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (min-width: 1600px) {
+    padding: $px-7 $px-10 $px-7 $px-10;
+  }
+
+  @media only screen and (max-width: 991px) {
+    padding: 8px 10px 8px 10px;
+    align-items: center;
+  }
+}
+
+.item:hover {
+  background-color: #E6F7FB;
+  border-radius: 10px !important;
+
+  @media only screen and (min-width: 1600px) {
+    border-radius: $px-10 !important;
+  }
+}
+
+.textBottom {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px;
+
+  p {
+    text-decoration: underline;
+    color: #258BAC;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .walletValue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+  }
+
+  .textAddr {
+
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 110px;
+      margin: 0 !important;
+      font-size: 12px !important;
+    }
+  }
+
+  .textWallet {
+
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 80px;
+      margin: 0 !important;
+      font-size: 12px !important;
+    }
+  }
+}
+
+.walletIcon {
+  margin-top: -7px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    svg {
+      width: $px-20;
+      height: $px-20;
+    }
+  }
+}

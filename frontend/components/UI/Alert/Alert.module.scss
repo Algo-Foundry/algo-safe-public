@@ -1,0 +1,86 @@
+.alertWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 8px;
+  gap: 10px;
+  width: 100%;
+  // min-height: 34px;
+  background: #ffffff;
+  border: 2px solid #e15173;
+  border-radius: 8px;
+  @media only screen and (min-width: 1600px) {
+    padding: $px-6 $px-8;
+    gap: $px-10;
+    border: $px-2 solid #e15173;
+    border-radius: $px-8;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+    @media only screen and (min-width: 1600px) {
+      width: $px-24;
+      height: $px-24;
+    }
+  }
+  .text {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
+    color: #e15173;
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-12;
+    }
+  }
+  .text.textMedium {
+    font-size: 12px;
+    @media only screen and (min-width: 992px) {
+      font-size: 14px;
+    }
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14;
+    }
+  }
+  &.urgent {
+    border: 2px solid #f69134;
+    @media only screen and (min-width: 1600px) {
+      border: $px-2 solid #f69134;
+    }
+    .text {
+      color: #f69134;
+    }
+  }
+  &.success {
+    border: 2px solid #028d81;
+    @media only screen and (min-width: 1600px) {
+      border: $px-2 solid #028d81;
+    }
+    .text {
+      color: #028d81;
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .alertWrapper {
+    padding: $px-7_5 $px-10;
+    gap: $px-10;
+    border: $px-2 solid #e15173;
+    border-radius: $px-8;
+    img {
+      width: $px-24;
+      height: $px-24;
+    }
+    .text {
+      font-size: $px-12;
+    }
+    .text.textMedium {
+      font-size: $px-14;
+    }
+    &.urgent {
+      border: $px-2 solid #f69134;
+    }
+  }
+}

@@ -1,0 +1,243 @@
+.wallet-disconnected {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  span {
+    height: 14px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    span {
+      height: 22px;
+    }
+  }
+
+  @media only screen and (min-width: 1600px) {
+    span {
+      height: $px-22;
+    }
+  }
+
+  .img-wlt {
+    height: 20px;
+    width: 20px;
+    position: relative;
+
+    @media only screen and (min-width: 1600px) {
+      height: $px-20;
+      width: $px-20;
+    }
+  }
+}
+
+.connectWallet {
+  width: 170px;
+  height: 40px;
+  z-index: 100;
+
+  &.active {
+    background: #8BD4E9 !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-170;
+    height: $px-40;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: max-content;
+    min-width: 147px !important;
+    width: 147px !important;
+    height: 34px;
+    min-height: 34px;
+  }
+}
+
+.connectWalletBox {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+    gap: $px-6;
+
+    svg {
+      width: $px-20 !important;
+      height: $px-20 !important;
+    }
+  }
+}
+
+.boxFixed {
+  position: fixed;
+  top: 15px;
+  right: 78px; //84px;
+
+  @media only screen and (min-width: 1600px) {
+    top: $px-15;
+    right: $px-78;
+  }
+
+  @media only screen and (max-width: 767px) {
+    top: 10px;
+    right: 58px;
+  }
+}
+
+.boxDropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dropdownMedia {
+  cursor: pointer;
+  flex-direction: column;
+  width: 200px;
+  background: #fff;
+  box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+  border-radius: 8px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 1;
+
+  a {
+    text-decoration: none;
+  }
+
+  .wrapTextBtn {
+    display: flex;
+    height: 50px;
+    padding: 0 14px;
+    align-items: center;
+    gap: 10px;
+    color: #000000;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+
+    &.title {
+      color: #B3B3B3;
+      font-weight: 700;
+      border-top: 1px solid #B3B3B3;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .lineMedia{
+    width: 100%;
+    border-bottom: 1px solid #B8E9F4;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-200;
+    box-shadow: 0 $px-2 $px-4 rgba(92, 92, 92, 0.25);
+    border-radius: $px-8;
+    top: calc(100% + $px-6);
+
+    .lineMedia{     
+      border-bottom: $px-1 solid #B8E9F4;
+    }
+    .wrapTextBtn {
+      height: $px-50;
+      padding: 0 $px-14;
+      gap: $px-10;
+      font-size: $px-14;
+
+      &.title {
+        border-top: $px-1 solid #B3B3B3;
+      }
+
+      svg {
+        width: $px-20;
+        height: $px-20;
+      }
+    }
+  }
+}
+
+.btnNotif {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #8BD4E9;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-40;
+    height: $px-40;
+    border-radius: $px-8;
+
+    svg {
+      width: $px-20 !important;
+      height: $px-20 !important;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.imgAddress {
+  width: 20px;
+  height: 20px;
+  filter: drop-shadow(0px 0px 4px rgba(92, 92, 92, 0.25));
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-20;
+    height: $px-20;
+    filter: drop-shadow(0 0 $px-4 rgba(92, 92, 92, 0.25));
+  }
+}
+
+.textAddress {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  color: #000000;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+  }
+}
+
+.textBlack {
+  color: #000000;
+}

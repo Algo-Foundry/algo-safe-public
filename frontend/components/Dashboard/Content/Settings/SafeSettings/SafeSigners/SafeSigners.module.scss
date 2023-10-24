@@ -1,0 +1,124 @@
+.container {
+  p {
+    margin: 0;
+    font-family: "DM Sans";
+    font-size: 14px;
+  }
+
+  width: 100%;
+  background: white;
+  padding: 20px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 20px;
+    border-radius: 0px !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    padding: $px-20;
+    padding-bottom: $px-5;
+    border-radius: $px-10;
+
+    p {
+      font-size: $px-14;
+    }
+  }
+}
+
+.titleWrapper {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #8BD4E9;
+
+  @media only screen and (max-width: 991px) {
+    border-bottom: 1px solid #8BD4E9;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    margin-bottom: $px-10;
+    padding-bottom: $px-10;
+    border-bottom: $px-2 solid #8BD4E9;
+  }
+}
+
+.titleHeader {
+  font-family: 'Poppins' !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px !important;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14 !important;
+  }
+
+  @media only screen and (max-width: 991px) {
+    font-size: 16px !important;
+  }
+}
+
+.textHeader {
+  color: #258BAC;
+  font-weight: 700 !important;
+}
+
+.headerWrapper {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #8BD4E9;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (min-width: 1600px) {
+    margin-bottom: $px-10;
+    padding-bottom: $px-10;
+    border-bottom: $px-2 solid #8BD4E9;
+  }
+
+  .colOne {
+    width: 20%;
+  }
+
+  .colTwo {
+    width: 25%;
+  }
+
+  .colThree {
+    width: 45%;
+  }
+
+  .colFour {
+    width: 10%;
+  }
+
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
+}
+
+.bodyWrapper {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  overflow-wrap: break-word;
+
+  @media only screen and (min-width: 1600px) {
+    margin-bottom: $px-10;
+    padding-bottom: $px-10;
+  }
+}
+
+.borderBottom {
+  border-bottom: 1px solid #B3B3B3;
+
+  @media only screen and (min-width: 1600px) {
+    border-bottom: $px-1 solid #B3B3B3;
+  }
+
+  &:last-child {
+    border: none;
+  }
+}

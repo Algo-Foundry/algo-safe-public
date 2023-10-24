@@ -1,0 +1,94 @@
+.connected-dapps-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(123, 125, 129, 0.06);
+  border-radius: 8px;
+
+  @media only screen and (max-width: 991px) {
+    background: rgba(123, 125, 129, 0.06);
+    // box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+  }
+
+
+  .connected-dapps-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 100px !important;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-8;
+    padding: $px-10 $px-16;
+    border-radius: $px-8;
+
+    // min-width: $px-430;
+    // min-height: $px-80;
+    .connected-dapps-logo {
+      width: $px-48;
+      height: $px-48;
+    }
+
+    svg {
+      width: $px-20;
+      height: $px-20;
+    }
+  }
+
+  .name {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14;
+    }
+  }
+
+  .link {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #808689;
+
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14;
+    }
+  }
+
+  .disconnect-btn {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    text-decoration-line: underline;
+    color: #258BAC;
+
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14;
+    }
+
+    @media screen and (max-width: 991px) {
+      display: inline !important;
+      font-family: 'DM Sans' !important;
+      font-size: 12px !important;
+      font-weight: 700;
+      text-decoration: underline;
+      curspor: pointer;
+      color: #258BAC;
+    }
+  }
+}

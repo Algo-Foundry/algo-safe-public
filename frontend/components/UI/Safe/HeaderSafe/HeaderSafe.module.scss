@@ -1,0 +1,44 @@
+.header-wrapper{
+    height: 44px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .header-title{        
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 43px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #000000;
+        @media only screen and (min-width: 768px) {
+            font-size: 36px;
+        }
+    }
+    .header-back-btn{
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        left: 0px;
+        top: 0px;
+        background: #E6F7FB;
+        border-radius: 8px;
+        display: flex;
+        cursor: pointer;
+        img{
+            margin: auto;
+            width: 24px;
+        }
+    }
+}
+@media only screen and (min-width: 1600px){
+    .header-wrapper{
+        height: $px-44;        
+        .header-title{
+            line-height: $px-43;            
+            font-size: $px-36;            
+        }        
+    }
+}

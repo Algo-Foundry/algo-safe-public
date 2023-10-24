@@ -1,0 +1,186 @@
+.stepper-wrapper {
+  font-family: "DM Sans";
+  font-style: normal;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  @media only screen and (min-width: 1600px) {
+    margin-bottom: $px-20;
+  }
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 140%;
+  width: 115px;
+  @media only screen and (min-width: 992px) {
+    font-size: 14px;
+    line-height: 160%;
+  }
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+    width: $px-115;
+  }
+  .step-name {
+    color: rgba(65, 75, 90, 0.5);
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #ebecf0;
+  background-blend-mode: soft-light, normal;
+  box-shadow: inset -1px -1px 2px #fafbff, inset 1px 1px 2px #a6abbd;
+  top: 6px;
+  left: -50%;
+  z-index: 2;
+  @media only screen and (min-width: 1600px) {
+    height: $px-4;
+    box-shadow: inset $_px-1 $_px-1 $px-2 #fafbff, inset $px-1 $px-1 $px-2 #a6abbd;
+    top: $px-6;
+  }
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #ebecf0;
+  background-blend-mode: soft-light, normal;
+  box-shadow: inset -1px -1px 2px #fafbff, inset 1px 1px 2px #a6abbd;
+  top: 6px;
+  left: 50%;
+  z-index: 2;
+  @media only screen and (min-width: 1600px) {
+    height: $px-4;
+    box-shadow: inset $_px-1 $_px-1 $px-2 #fafbff, inset $px-1 $px-1 $px-2 #a6abbd;
+    top: $px-6;
+  }
+}
+
+.stepper-item .step-dot {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14.63px;
+  height: 14.63px;
+  border-radius: 50%;
+  background: #e6f7fb;
+  box-shadow: -1px -1px 2px #fafbff, 1px 1px 2px #a6abbd;
+  margin-bottom: 20px;
+  img {
+    display: none;
+    width: 9px;
+  }
+  @media only screen and (min-width: 1600px) {
+    width: 1.0159722222222223vw;
+    height: 1.0159722222222223vw;
+    box-shadow: inset $_px-1 $_px-1 $px-2 #fafbff, inset $px-1 $px-1 $px-2 #a6abbd;
+    margin-bottom: $px-20;
+    img {
+      width: $px-9;
+    }
+  }
+}
+
+.stepper-item .step-name {
+  text-align: center;
+  @media only screen and (min-width: 768px) {
+    width: 145px;
+  }
+  @media only screen and (min-width: 1600px) {
+    width: $px-145;
+  }
+}
+
+.stepper-item.active {
+  .step-dot {
+    background-color: #000000;
+    box-shadow: -1px -1px 2px #fafbff, 1px 1px 2px #a6abbd;
+    @media only screen and (min-width: 1600px) {
+      box-shadow: inset $_px-1 $_px-1 $px-2 #fafbff, inset $px-1 $px-1 $px-2 #a6abbd;
+    }
+  }
+  .step-name {
+    font-weight: 700;
+    color: #000000;
+  }
+}
+
+.stepper-item.completed {
+  .step-dot {
+    background-color: $primary-color;
+    border: 0.5px solid #42a1b6;
+    box-shadow: -1px -1px 2px #fafbff, 1px 1px 2px rgba(117, 117, 117, 0.5);
+    img {
+      display: block;
+    }
+    @media only screen and (min-width: 1600px) {
+      box-shadow: inset $_px-1 $_px-1 $px-2 #fafbff, inset $px-1 $px-1 $px-2 #a6abbd;
+      border: 0.034722222222222224vw solid #42a1b6;
+    }
+  }
+  .step-name {
+    color: $primary-color;
+  }
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  background: $primary-color;
+  background-blend-mode: unset;
+  box-shadow: unset;
+  width: 100%;
+  top: 6px;
+  left: 50%;
+  z-index: 3;
+  @media only screen and (min-width: 1600px) {
+    height: $px-4;
+    top: $px-6;
+  }
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .stepper-wrapper {
+    min-width: unset;
+    // max-width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .stepper-item {
+    font-weight: 400;
+    line-height: 160%;
+    @media only screen and (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  .stepper-item::before {
+    height: 3px;
+  }
+  .stepper-item::after {
+    height: 3px;
+  }
+  .stepper-item.completed::after {
+    height: 4px;
+  }
+}

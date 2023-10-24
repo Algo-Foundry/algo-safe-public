@@ -1,0 +1,136 @@
+.qr-code-modal {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0;
+
+  label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    color: #000000;
+  }
+
+  span {
+    font-size: 14px;
+  }
+
+  .mb-sm {
+    margin-bottom: -2px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.img-scan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 274px;
+  height: 274px;
+  background: #E6F7FB;
+  border-radius: 20px;
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-274;
+    height: $px-274;
+    border-radius: $px-20;
+  }
+}
+
+.img-sm {
+  width: 16px;
+  height: 16px;
+}
+
+.title-adr {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+  color: #000000;
+}
+
+@media only screen and (min-width: 1600px) {
+  .qr-code-modal {
+    font-size: $px-14;
+    gap: $px-20;
+    margin: $px-20 0;
+
+    label {
+      font-size: $px-18;
+    }
+
+    span {
+      font-size: $px-12;
+    }
+
+    .mb-sm {
+      margin-bottom: $_px-2;
+    }
+  }
+
+  .img-scan {
+    width: $px-274;
+    height: $px-274;
+    border-radius: $px-20;
+
+    svg {
+      scale: 1.1;
+    }
+  }
+
+  .img-sm {
+    width: $px-16;
+    height: $px-16;
+  }
+
+  .title-adr {
+    font-size: $px-14;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .img-scan {
+    svg {
+      scale: 1.2;
+    }
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  .img-scan {
+    svg {
+      scale: 1.7;
+    }
+  }
+}
+
+@media only screen and (min-width: 3100px) {
+  .img-scan {
+    svg {
+      scale: 2.2;
+    }
+  }
+}
+
+@media only screen and (min-width: 3800px) {
+  .img-scan {
+    svg {
+      scale: 2.5;
+    }
+  }
+}

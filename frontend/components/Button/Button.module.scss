@@ -1,0 +1,93 @@
+.btn {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 7.5px auto;
+  border-radius: 8px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  line-height: 150%;
+  border: none;
+  @media only screen and (min-width: 1600px) {
+    min-height: $px-40;
+    gap: $px-5;
+    padding: $px-7_5 auto;
+    border-radius: $px-8;
+    font-size: $px-14;
+  }
+}
+
+.primary {
+  background: #258BAC;
+  color: #FFFFFF;
+  min-width: 140px;
+  box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+  @media only screen and (min-width: 1600px) {
+    min-width: $px-140;
+    box-shadow: 0px $px-2 $px-4 rgba(92, 92, 92, 0.25);
+  }
+}
+
+.danger {
+  background: #E15173;
+  color: #FFFFFF;
+  min-width: 140px;
+  box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+  @media only screen and (min-width: 1600px) {
+    min-width: $px-140;
+    box-shadow: 0px $px-2 $px-4 rgba(92, 92, 92, 0.25);
+  }
+}
+
+.cancel {
+  min-width: 100px;
+  @media only screen and (min-width: 1600px) {
+    min-width: $px-100;
+  }
+}
+
+.outlined {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+  border: 2px solid #028D81;
+  color: #028D81;
+  min-width: 100px;
+  @media only screen and (min-width: 1600px) {
+    box-shadow: 0px $px-2 $px-4 rgba(92, 92, 92, 0.25);
+    border: $px-2 solid #028D81;
+    min-width: $px-100;
+  }
+  span {
+    font-family: 'DIN Condensed';
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-18;
+    }
+  }
+}
+
+.outline-red {
+  border: 2px solid #E15173;
+  color: #E15173;
+  @media only screen and (min-width: 1600px) {
+    border: $px-2 solid #E15173;
+  }
+}
+
+.btn.disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  border: 1px solid #B3B3B3;
+  background: #FFFFFF;
+  color: #B3B3B3;
+  @media only screen and (min-width: 1600px) {
+    border: $px-1 solid #B3B3B3;
+  }
+}

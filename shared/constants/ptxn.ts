@@ -1,0 +1,67 @@
+const STATUS_NEED_CONFIRMATION = "Need Confirmation";
+const STATUS_READY = "Ready";
+const STATUS_REJECT_READY = "Reject Ready";
+const STATUS_PENDING = "Pending";
+const STATUS_SUCCESS = "Success";
+const STATUS_EXPIRED = "Expired";
+const PAYLOAD_PAY = "pay";
+const PAYLOAD_ASSET_SEND = "asset-send";
+const PAYLOAD_ASSET_CREATE = "asset-create";
+const PAYLOAD_ASSET_CLAWBACK = "asset-clawback";
+const PAYLOAD_ASSET_FREEZE = "asset-freeze";
+const PAYLOAD_ASSET_MODIFY = "asset-modify";
+const PAYLOAD_ASSET_DESTROY = "asset-destroy";
+const PAYLOAD_ASSET_NEW = "asset-new";
+const PAYLOAD_ASSET_REMOVE = "asset-remove";
+const PAYLOAD_ASSET_TRANSFER = "asset-transfer";
+const PAYLOAD_ASSET_OPT_IN = "asset-optin";
+const PAYLOAD_APPL = "app-call";
+const PAYLOAD_APP_CREATE = "app-create";
+const PAYLOAD_APP_UPDATE = "app-update";
+const PAYLOAD_APP_OPTIN = "app-optin";
+const PAYLOAD_APP_CLOSEOUT = "app-closeout";
+const PAYLOAD_APP_CLEAR = "app-clear";
+const PAYLOAD_APP_DELETE = "app-delete";
+const PAYLOAD_KEY_REGISTRATION = "key-registration";
+const PAYLOAD_ATOMIC = "atomic";
+const PAYLOAD_CLOSE_ASSET = "close-asset";
+const VOTE_NO_ACTION = "Not Voted";
+const VOTE_CONFIRM = "Confirmed";
+const VOTE_REJECT = "Rejected";
+const DIR_SEND = "Send";
+const DIR_RECEIVE = "Receive";
+
+export {
+  STATUS_NEED_CONFIRMATION,
+  STATUS_READY,
+  STATUS_REJECT_READY,
+  STATUS_PENDING,
+  STATUS_SUCCESS,
+  STATUS_EXPIRED,
+  PAYLOAD_PAY,
+  PAYLOAD_ASSET_SEND,
+  PAYLOAD_ASSET_CREATE,
+  PAYLOAD_ASSET_NEW,
+  PAYLOAD_ASSET_REMOVE,
+  PAYLOAD_ASSET_CLAWBACK,
+  PAYLOAD_ASSET_FREEZE,
+  PAYLOAD_ASSET_MODIFY,
+  PAYLOAD_ASSET_DESTROY,
+  PAYLOAD_ASSET_TRANSFER,
+  PAYLOAD_ASSET_OPT_IN,
+  PAYLOAD_APPL,
+  PAYLOAD_APP_CREATE,
+  PAYLOAD_APP_UPDATE,
+  PAYLOAD_APP_OPTIN,
+  PAYLOAD_APP_CLOSEOUT,
+  PAYLOAD_APP_CLEAR,
+  PAYLOAD_APP_DELETE,
+  PAYLOAD_KEY_REGISTRATION,
+  PAYLOAD_ATOMIC,
+  PAYLOAD_CLOSE_ASSET,
+  VOTE_NO_ACTION,
+  VOTE_CONFIRM,
+  VOTE_REJECT,
+  DIR_SEND,
+  DIR_RECEIVE,
+};

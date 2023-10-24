@@ -1,0 +1,136 @@
+.button-txn-modal {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Archivo';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 18px;
+    height: 24px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+
+    p {
+      font-size: $px-18;
+      height: $px-24;
+    }
+  }
+
+  .modal-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-family: 'DM Sans' !important;
+      font-size: 14px !important;
+      line-height: 160% !important;
+      display: flex !important;
+      align-items: center !important;
+      color: #000000;
+    }
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-20;
+
+      p {
+        font-size: $px-14 !important;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      padding: 0 20px;
+    }
+  }
+}
+
+.modal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+
+  label {
+    font-weight: 700;
+  }
+
+  label,
+  input {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20;
+    font-size: $px-14;
+
+    label,
+    input {
+      font-size: $px-14;
+    }
+  }
+
+  .borderLine {
+    display: flex;
+    align-items: center;
+    gap: 8px !important;
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-8 !important;
+
+      svg {
+        width: $px-12;
+        height: $px-12;
+      }
+    }
+  }
+
+  .btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    p {
+      margin: 0 !important;
+    }
+
+    .btn {
+      width: 100%;
+      min-height: 40px;
+
+      @media only screen and (min-width: 768px) {
+        width: auto;
+        min-height: 36px;
+      }
+    }
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-10;
+
+      .btn {
+        min-height: $px-36;
+      }
+    }
+  }
+}
+
+.modal-body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

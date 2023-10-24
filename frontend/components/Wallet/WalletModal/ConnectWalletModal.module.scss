@@ -1,0 +1,533 @@
+.connectWallet {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  span {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    text-align: center;
+    color: #414B5A;
+  }
+
+  a {
+    font-weight: 600;
+    color: #258BAC;
+    text-decoration: underline;
+  }
+}
+
+.svgIcon {
+  svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+}
+
+.boxConnectMsg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 10px 30px 10px 20px;
+  margin-bottom: -4px;
+  background: #B8E9F4;
+  font-family: 'DM Sans';
+  font-style: normal;
+  line-height: 160%;
+  color: #000000;
+  font-weight: 400;
+  font-size: 12px;
+
+  .textBig {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #414B5A;
+  }
+
+  .textBold {
+    font-weight: 700 !important;
+  }
+
+  .gapMsg {
+    gap: 4px;
+  }
+
+  .textWidth {
+    display: flex;
+    justify-content: space-between;
+    width: 79px;
+  }
+
+  .textMinWidth {
+    min-width: 79px;
+  }
+}
+
+.walletWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .boxWallet {
+    cursor: pointer;
+    max-width: 342px;
+    height: 56px;
+    background: #F2F9FB;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    span {
+      font-family: 'Roboto';
+      line-height: 160%;
+
+      &.connectText {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      border: 2px solid #8BD4E9;
+
+      span.connectText {
+        margin-left: auto;
+        opacity: 1;
+        text-decoration: underline;
+        color: #258BAC;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.boxIcon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-40;
+    height: $px-40;
+
+    img {
+      height: $px-40;
+      width: $px-40;
+    }
+  }
+}
+
+.boxConnectWallet {
+  width: 500px;
+  height: 100vh;
+  background: #E6F7FB;
+  box-shadow: -2px -2px 10px rgba(92, 92, 92, 0.16);
+  position: fixed;
+  top: 0;
+  right: -500px;
+  transition: right 0.5s ease, visibility 0.1s ease 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 80px;
+
+  &.show {
+    right: 0;
+    visibility: visible;
+  }
+}
+
+.wrapWallet {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 92px;
+  gap: 12px;
+  padding: 12px 30px 12px 20px;
+  background: #FFFFFF;
+  order: 2;
+
+  &.active {
+    order: 0 !important;
+  }
+
+  &.connected {
+    order: 1;
+  }
+}
+
+.textTitleWallet {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  color: #414B5A;
+}
+
+.btnConnect {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  color: #258BAC;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.activeConnect {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  color: #FFFFFF;
+  padding: 2px 8px 4px;
+  width: 55px;
+  height: 20px;
+  background: #4ACD1C;
+  border-radius: 4px;
+}
+
+.boxDisconnext {
+  color: #E15173;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .boxTooltips {
+      display: flex;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .boxTooltips {
+    display: none;
+    position: absolute;
+    top: 130%;
+    right: 50%;
+    padding: 2px 6px;
+    gap: 20px;
+    box-shadow: 0px 0px 4px 0px rgba(111, 111, 111, 0.30);
+    background: var(--grey-2, linear-gradient(315deg, rgba(0, 0, 0, 0.60) 0%, rgba(255, 255, 255, 0.00) 100%), #EDEEF2);
+    background-blend-mode: soft-light, normal;
+    border-radius: 8px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px !important;
+    line-height: 160%;
+    color: #000000;
+
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-10 !important;
+      padding: $px-2 $px-6;
+      border-radius: $px-8;
+    }
+  }
+}
+
+.boxSorting {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .btnSort {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 370px;
+    height: 46px;
+    border-radius: 8px;
+    padding: 4px 12px;
+    color: #000000;
+    background: #E6F7FB;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
+    border: none;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:active,
+    &:focus {
+      border: 1px solid #8BD4E9;
+    }
+  }
+}
+
+.dropdownSort {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 1;
+  width: 370px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 8px rgba(92, 92, 92, 0.3);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  color: #000000;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .wrapTextBtn {
+    display: flex;
+    padding: 7px 18px 9px 12px;
+    justify-content: space-between;
+    align-items: center;
+
+    &.select {
+      background: #E6F7FB;
+    }
+  }
+}
+
+.connectWalletBg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(246, 249, 250, 0.75);
+  backdrop-filter: blur(2px);
+}
+
+.gapWallet {
+  gap: 4px;
+}
+
+@media only screen and (min-width: 1600px) {
+  .gapWallet {
+    gap: $px-4;
+  }
+
+  .connectWallet {
+    gap: $px-20;
+
+    span {
+      font-size: $px-14;
+    }
+  }
+
+  .walletWrapper {
+    gap: $px-10;
+
+    .boxWallet {
+      max-width: $px-342;
+      height: $px-56;
+      padding: $px-8 $px-12;
+      border-radius: $px-20;
+      gap: $px-12;
+
+      &:hover {
+        border: $px-2 solid #8BD4E9;
+      }
+    }
+  }
+
+  .boxConnectWallet {
+    width: $px-500;
+    box-shadow: $_px-2 $_px-2 $px-10 rgba(92, 92, 92, 0.16);
+    right: $_px-500;
+    gap: $px-4;
+    padding-top: $px-80;
+  }
+
+  .wrapWallet {
+    height: $px-92;
+    gap: $px-12;
+    padding: $px-12 $px-30 $px-12 $px-20;
+  }
+
+  .textTitleWallet {
+    font-size: $px-14;
+  }
+
+  .btnConnect {
+    font-size: $px-14;
+    gap: $px-10;
+
+    svg {
+      width: $px-16;
+      height: $px-16;
+    }
+  }
+
+  .activeConnect {
+    font-size: $px-14;
+    padding: $px-2 $px-8 $px-4;
+    width: $px-55;
+    height: $px-20;
+    border-radius: $px-4;
+  }
+
+  .boxDisconnext {
+    svg {
+      width: $px-20;
+      height: $px-20;
+    }
+
+    .boxTooltips {
+      padding: $px-2 $px-6;
+      gap: $px-20;
+      border-radius: $px-8;
+      font-size: $px-10;
+    }
+  }
+
+  .boxSorting {
+    .btnSort {
+      width: $px-370;
+      height: $px-46;
+      border-radius: $px-8;
+      padding: $px-4 $px-12;
+      font-size: $px-12;
+
+      svg {
+        width: $px-20;
+        height: $px-20;
+      }
+
+      &:active,
+      &:focus {
+        border: $px-1 solid #8BD4E9;
+      }
+    }
+  }
+
+  .dropdownSort {
+    top: calc(100% + $px-6);
+    width: $px-370;
+    box-shadow: 0 0 $px-8 rgba(92, 92, 92, 0.3);
+    border-radius: $px-8;
+    font-size: $px-12;
+
+    svg {
+      width: $px-20;
+      height: $px-20;
+    }
+
+    .wrapTextBtn {
+      padding: $px-7 $px-18 $px-9 $px-12;
+    }
+  }
+
+  .boxConnectMsg {
+    height: $px-80;
+    padding: $px-10 $px-30 $px-10 $px-20;
+    margin-bottom: $_px-4;
+
+    font-size: $px-12;
+
+    .textBig {
+      font-size: $px-14;
+    }
+
+    .gapMsg {
+      gap: $px-4;
+    }
+
+    .textWidth {
+      width: $px-79;
+    }
+
+    .textMinWidth {
+      min-width: $px-79;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .gapWallet {
+    gap: 12px;
+  }
+
+  .boxConnectWallet {
+    width: 300px;
+    right: -300px;
+    padding-top: 70px;
+  }
+
+  .wrapWallet {
+    height: max-content;
+    padding: 10px 12px 12px;
+    min-height: 70px;
+  }
+
+  .textTitleWallet {
+    font-size: 12px;
+
+  }
+
+  .btnConnect {
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .activeConnect {
+    font-size: 12px;
+    width: 49px;
+  }
+
+  .boxSorting {
+    .btnSort {
+      width: 248px;
+      height: max-content;
+    }
+  }
+
+  .dropdownSort {
+    width: 248px;
+  }
+
+  .boxIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .boxConnectMsg {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 12px;
+  }
+}

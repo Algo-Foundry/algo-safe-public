@@ -1,0 +1,92 @@
+.wrapLoader {
+  position: relative;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  img.ledger-icon {
+    top: 7.8px;
+    left: 9.5px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+
+    .wrapLoader,
+    svg {
+      width: $px-40;
+      height: $px-40;
+    }
+
+    img.ledger-icon {
+      top: $px-7_8;
+      left: $px-9_5;
+      position: absolute;
+      width: $px-40;
+      height: $px-40;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+
+    .wrapLoader,
+    svg {
+      width: 173.73px;
+      height: 173.73px;
+
+      &.ledger {
+        width: 240px;
+        height: 240px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+
+    .wrapLoader,
+    svg {
+      position: relative;
+      width: 240px;
+      height: 240px;
+    }
+  }
+}
+
+.textLoader {
+  color: #42A1B6;
+  font-weight: bold;
+}
+
+.loader {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  animation: rotation 2s linear infinite;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-60;
+    height: $px-60;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}

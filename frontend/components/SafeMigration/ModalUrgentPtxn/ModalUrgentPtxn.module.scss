@@ -1,0 +1,42 @@
+.attention-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #000000;
+  margin-bottom: 40px;
+  .attention-subtitle {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 160%;    
+    display: flex;
+    align-items: center;  
+    gap: 10px;
+    padding: 5px 20px;
+    background: #FBD037;
+    border-radius: 12px;
+  }
+  @media only screen and (max-width: 991px) {
+    .attention-subtitle{
+      font-size: 12px !important;
+      line-height: 20px !important;
+    }
+  }
+  @media only screen and (min-width: 1600px) {
+    gap: $px-6;
+    .attention-title {
+      font-size: $px-18 !important;
+    }
+    .attention-subtitle {
+      font-size: $px-14 !important;
+      gap: $px-10;
+      padding: $px-5 $px-20;
+      border-radius: $px-12;
+      img {
+        height: $px-20;
+        width: $px-20;
+      }
+    }
+  }
+}

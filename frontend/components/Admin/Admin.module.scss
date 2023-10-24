@@ -1,0 +1,233 @@
+.admin-panel {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: $font-regular;
+  font-weight: 400;
+  line-height: 160%;
+
+  @media only screen and (min-width: 1600px) {
+    border-radius: $px-20;
+    padding: $px-20;
+    margin-bottom: $px-20;
+  }
+
+  h5 {
+    font-family: 'DIN Condensed';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-24;
+      line-height: $px-29;
+    }
+  }
+
+  button {
+    display: inline;
+    min-width: 178px;
+    &.small{
+      min-width: 93px;
+    }
+    @media only screen and (min-width: 1600px) {
+      min-width: $px-178;
+      &.small{
+        min-width: $px-93 !important;
+      }
+    }
+  }
+
+  .address{
+    position: relative;
+    flex-direction: row;
+    .imgAdr{
+      position: absolute;
+      right: 8px;
+      top: 37px;
+      width: 20px;
+      height: 20px;
+      @media only screen and (min-width: 1600px) {
+        right: $px-8;
+        top: $px-37;
+        width: $px-20;
+        height: $px-20;
+      }
+    }
+  }
+
+  .form-select {
+    margin: 20px 0;
+    @media only screen and (min-width: 1600px) {
+      margin: $px-20 0;
+    }
+  }
+
+  .box-state {
+    word-break: break-all;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 14px;
+    border: 2px solid #B3B3B3;
+    border-radius: 8px;
+    padding: 14px;
+    @media only screen and (min-width: 1600px) {
+      margin-top: $px-20;
+      font-size: $px-14;
+      border: $px-2 solid #B3B3B3;
+      border-radius: $px-8;
+      padding: $px-14;
+    }
+    .state-details {
+      display: flex;
+      flex-direction: column;
+      @media only screen and (min-width: 1600px) {
+        gap: $px-2;
+        span {
+          height: 2vw;
+        }
+      }
+    }
+  }
+  .table-container {
+    display: none;
+    padding: 20px 0 0;
+    border-radius: 20px;
+  
+    @media only screen and (min-width: 768px) {
+      display: block;
+    }
+    @media only screen and (min-width: 992px) {
+      padding: 20px;
+      background: white;
+    }
+    @media only screen and (min-width: 1600px) {
+      padding: $px-20;
+      border-radius: $px-20;
+    }
+  
+    th {
+      font-family: $font-din-condensed;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+  
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+  
+      color: #258bac;
+  
+      padding-top: 0;
+      padding-bottom: 12px;
+      text-align: center;
+      &:first-child {
+        text-align: left;
+      }
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-18;
+        padding-bottom: $px-12;
+      }
+    }
+  
+    th,
+    td {
+      border-color: #8bd4e9;
+      border-bottom-width: 2px;
+      border-left: 0;
+      border-top: 0;
+      border-right: 0;
+      box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.25);
+      vertical-align: middle;
+      @media only screen and (min-width: 1600px) {
+        border-bottom-width: $px-2;
+        box-shadow: 0 $_px-1 $px-10 rgba(255, 255, 255, 0.25);
+      }
+      button {                
+        min-width: 93px;        
+        @media only screen and (min-width: 1600px) {          
+          min-width: $px-93;
+          
+        }
+      }
+    }
+  
+    td {
+      font-family: $font-regular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      padding: 12px;
+      padding-right: 8px;
+      text-align: center;
+  
+      &:first-child {
+        padding-left: 8px;
+        text-align: left;
+      }
+      .action-button {
+        padding-top: 3px;
+      }
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-14;
+        padding: $px-12;
+        padding-right: $px-8;
+        &:first-child {
+          padding-left: $px-8;
+        }
+        .action-button {
+          padding-top: $px-3;
+        }
+      }
+    }
+    tr{
+      border: none;
+    }
+    .spacer {
+      display: none;
+      width: 120px;
+      height: 36px;
+  
+      @media only screen and (min-width: 768px) {
+        display: table-cell;
+      }
+      @media only screen and (min-width: 1600px) {
+        width: $px-120;
+        height: $px-36;
+      }
+    }
+  
+    .action-btn {
+      visibility: hidden;
+    }
+  
+    .tr-item:hover {
+      .action-btn {
+        visibility: visible;
+      }
+    }
+  
+    tbody {
+      tr:last-child {
+        td {
+          border: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.box-pgn{
+  button {
+    display: inline;
+    min-width: 38px;
+  }
+  select{
+    margin: 5px 0;
+  }
+}

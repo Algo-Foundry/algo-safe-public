@@ -1,0 +1,116 @@
+.modalConfirmCont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    overflow-x: hidden;
+    .iconModal{
+        margin-top: 21px;
+        margin-bottom: 30px;
+        width: 100px;
+        height: 100px;
+        @media only screen and (min-width: 1600px) {
+          margin-top: $px-21;
+          margin-bottom: $px-30;
+          width: $px-100;
+          height: $px-100;
+        }
+    }
+    .textModal {
+      font-family: $font-regular;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 160%;
+      color: #000000;
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-12;
+      }
+    }
+    .loader1 {
+        margin-top: 21px;
+        margin-bottom: 30px;
+        position: relative;
+        width : 100px;
+        height: 100px;
+        border: 15px solid #dcf4fa;        
+        border-radius: 50%;
+        display: inline-block;
+        animation: rotation 2s linear infinite;  
+        @media only screen and (min-width: 1600px) {
+          margin-top: $px-21;
+          margin-bottom: $px-30;
+          width: $px-100;
+          height: $px-100;
+          border: $px-15 solid #dcf4fa;  
+        }    
+        img{
+            width:47.73px;
+            height:47.73px;
+            position: absolute;
+            right: -12px;
+            top: -13px;
+            @media only screen and (min-width: 1600px) {
+              width: $px-47_73;
+              height: $px-47_73;
+              right: $_px-12;
+              top: $_px-13;
+          }
+        }
+      }  
+}
+.mobileWarning {
+  display: flex;
+  .mrWarn{
+    margin-right: 10px;
+  }
+}
+@keyframes rotation {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+  }
+
+@media only screen and (max-width: 991px){
+  .modalConfirmCont{
+    .boxProgress{
+        transform: scale(1);
+        margin-top: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px){
+  .modalConfirmCont{    
+    .iconModal{
+        margin-top: $px-21;
+        margin-bottom: $px-30;
+        width: $px-100;
+        height: $px-100;
+    }
+    .textModal {      
+      font-size: $px-12;      
+    }
+    .loader1 {
+        margin-top: $px-21;
+        margin-bottom: $px-30;        
+        width : $px-100;
+        height: $px-100;
+        border: $px-15 solid #dcf4fa;        
+        img{
+            width: $px-47_73;
+            height: $px-47_73;
+            position: absolute;
+            right: $_px-12;
+            top: $_px-13;
+        }
+      }  
+  }
+  .mobileWarning {    
+    .mrWarn{
+      margin-right: $px-10;
+      img{
+        width: $px-16;
+      }
+    }
+  }
+}

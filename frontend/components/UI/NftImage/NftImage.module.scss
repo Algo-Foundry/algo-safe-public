@@ -1,0 +1,64 @@
+.sizeFit{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nftBlur{
+  width: 100%;
+  height: 100%;
+  background: #6F6F6FB2;
+  position: absolute;
+}
+.link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  img {
+    height: 30px !important;
+    width: 30px !important;
+    @media only screen and (min-width: 1600px) {
+      height: $px-30 !important;;
+      width: $px-30 !important;;
+    }
+  }
+  &.sm {
+    img {
+      height: 20px !important;
+      width: 20px !important;
+      @media only screen and (min-width: 1600px) {
+        height: $px-20 !important;;
+        width: $px-20 !important;;
+      }
+    }
+  }
+  &.lg {
+    img {
+      height: 40px !important;
+      width: 40px !important;
+      @media only screen and (min-width: 1600px) {
+        height: $px-40 !important;;
+        width: $px-40 !important;;
+      }
+    }
+  }
+  &.iconTop{
+    bottom: unset;
+    top: 6px;
+    right: 7px;
+    @media only screen and (min-width: 1600px) {
+      top: $px-6;
+      right: $px-7;
+    }
+  }
+  &.iconBottomMiddle{
+    bottom: 10px;    
+    right: 10px;
+    @media only screen and (min-width: 1600px) {
+      bottom: $px-10;
+      right: $px-10;
+    }
+  }
+}

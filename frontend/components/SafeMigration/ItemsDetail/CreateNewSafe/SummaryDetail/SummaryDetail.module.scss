@@ -1,0 +1,37 @@
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @media only screen and (min-width: 992px) {
+    gap: 6px;
+  }
+  .text-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: $font-regular;
+    font-size: 12px;
+    line-height: 160%;
+    color: #000000;
+    @media only screen and (min-width: 992px) {
+      font-size: 14px;
+      justify-content: unset;
+    }
+    .text-label {
+      max-width: 131px;
+      width: 100%;
+      @media only screen and (min-width: 992px) {
+        max-width: 273px;
+      }
+    }
+    .text-content {
+      font-weight: 600;
+      .address {
+        span {
+          text-align: start;
+        }
+      }
+      @media only screen and (min-width: 992px) {}
+    }
+  }
+}

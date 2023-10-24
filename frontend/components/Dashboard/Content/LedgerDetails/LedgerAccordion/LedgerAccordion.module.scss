@@ -1,0 +1,405 @@
+.boxAccordion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    position: relative;
+    padding: 0 24px;
+
+    &.active {
+        background: #F2F9FB;
+    }
+
+    @media only screen and (min-width: 1600px) {
+        padding: 0 $px-24;
+    }
+
+    .accordionItemWrap {
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        display: flex;
+        max-width: 342px;
+
+        &:nth-child(2) {
+            max-width: 200px;
+        }
+
+        &:nth-child(3) {
+            max-width: 203px;
+        }
+
+        &:nth-child(5) {
+            max-width: 155px;
+        }
+
+        @media only screen and (min-width: 1600px) {
+            max-width: $px-342;
+
+            &:nth-child(2) {
+                max-width: $px-200;
+            }
+
+            &:nth-child(3) {
+                max-width: $px-203;
+            }
+
+            &:nth-child(5) {
+                max-width: $px-155;
+            }
+        }
+    }
+
+    .accordionItem {
+        display: flex;
+        padding: 11px 0;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        cursor: pointer;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #000000;
+
+        &.active {
+            border-bottom: 1px solid #8BD4E9;
+        }
+
+        @media only screen and (min-width: 1600px) {
+            padding: $px-11 0;
+            gap: $px-10;
+            font-size: $px-14;
+
+            &.active {
+                border-bottom: $px-1 solid #8BD4E9;
+            }
+        }
+    }
+
+    .subtitle {
+        font-size: 12px;
+        opacity: 0.5;
+
+        @media only screen and (min-width: 1600px) {
+            font-size: $px-12;
+        }
+    }
+
+    .boxType {
+        width: 100%;
+        span {
+            text-wrap: nowrap;
+        }
+        // max-width: 160px;    
+        @media only screen and (min-width: 1600px) {
+
+            // max-width: $px-160;   
+            svg {
+                height: $px-24 !important;
+                width: $px-24 !important;
+            }
+        }
+    }
+
+    .boxCoin {
+        width: 100%;
+        max-width: 188px;
+
+        @media only screen and (min-width: 1600px) {
+            max-width: $px-188;
+        }
+    }
+
+    .boxArrow {
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+
+        &.active {
+            transform: rotate(-180deg);
+        }
+
+        svg {
+            height: 20px !important;
+            width: 20px !important;
+        }
+
+        @media only screen and (min-width: 1600px) {
+            svg {
+                height: $px-20 !important;
+                width: $px-20 !important;
+            }
+        }
+    }
+
+    .boxConfirm {
+        display: none;
+        flex: row;
+        gap: 10px;
+
+        @media only screen and (min-width: 1600px) {
+            gap: $px-10;
+        }
+    }
+
+    .pink {
+        color: #E15173;
+
+        .dot {
+            background-color: #E15173;
+        }
+    }
+
+    .orange {
+        color: #F69134;
+
+        .dot {
+            background-color: #F69134;
+        }
+    }
+
+    .green {
+        color: #028D81;
+
+        .dot {
+            background-color: #028D81;
+        }
+    }
+
+    .boxContent {
+        width: 100%;
+        padding-bottom: 20px;
+        padding-top: 10px;
+
+        @media only screen and (min-width: 1600px) {
+            padding-bottom: $px-20;
+            padding-top: $px-10;
+        }
+
+        &.borderActive {
+            border-top: 1px solid #8BD4E9;
+
+            @media only screen and (min-width: 1600px) {
+                border-top: $px-1 solid #8BD4E9;
+            }
+        }
+
+        &.borderDelete {
+            border-top: 1px solid #E15173;
+
+            @media only screen and (min-width: 1600px) {
+                border-top: $px-1 solid #E15173;
+            }
+        }
+    }
+
+    .collapseItems {
+        overflow: hidden;
+        transition: max-height .3s;
+        max-height: 0;
+
+        &.show {
+            max-height: 100%;
+        }
+
+        @media only screen and (max-width: 991px) {
+            margin-top: 70px;
+        }
+    }
+
+    .top-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 11px 20px;
+        gap: 10px;
+        background: #8bd4e9;
+
+        @media only screen and (min-width: 1600px) {
+            padding: $px-11 $px-20;
+            gap: $px-10;
+        }
+
+        .title {
+            font-family: $font-regular;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 160%;
+
+            @media only screen and (min-width: 1600px) {
+                font-size: $px-12;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .boxAccordion {
+        padding: 0 16px;
+        border-radius: 12px;
+
+        &.itemHover:hover {
+            background: #FFFFFF;
+            border: none;
+        }
+
+        &.bgDelete {
+            .collapseItems {
+                .accordionItem {
+                    &::before {
+                        border-bottom: 1.3px solid #E15173;
+                    }
+                }
+            }
+        }
+
+        &.urgent {
+            &:hover {
+                background: #FFFAE2;
+                border: 1px solid #F69134;
+            }
+
+            .boxContent {
+                &.borderActive {
+                    border-top: none
+                }
+            }
+
+            .collapseItems {
+                .accordionItem {
+                    &::before {
+                        border-bottom: 1.3px solid #F69134;
+                    }
+                }
+            }
+        }
+
+        .accordionItemWrap {
+            width: fit-content;
+            align-self: flex-start;
+            gap: 2.5px;
+            display: flex;
+            flex-direction: column;
+            width: 115px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            &:nth-child(2) {
+                width: fit-content;
+                align-self: flex-start;
+                justify-content: flex-start;
+                gap: 2.5px;
+                display: flex;
+                flex-direction: column;
+                max-width: 203px;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                display: none;
+            }
+
+            &:nth-child(5) {
+                max-width: unset;
+                flex-direction: row;
+                margin: auto 0;
+            }
+        }
+
+        .subtitle {
+            font-size: 10px;
+        }
+
+        .accordionItem {
+            padding: 8px 0;
+            gap: 12px;
+            font-size: 12px;
+            justify-content: space-between;
+            align-items: center;
+
+            &.itemMob {
+                align-items: flex-start;
+            }
+        }
+
+        .boxArrow {
+            margin-left: 12px;
+            transform: rotate(-90deg);
+
+            &.active {
+                transform: rotate(-90deg);
+            }
+        }
+
+        .collapseItems {
+            overflow: hidden;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            left: 0;
+            top: 0;
+            max-height: 100vh;
+            height: 100%;
+            width: 100%;
+            transition: transform 0.3s ease;
+            background: inherit;
+            // transform: translateY(calc(105vh - 60px));
+            transform: translateY(calc(105vh - 30px));
+            z-index: 10;
+            padding-bottom: 110px;
+
+            &.show {
+                transform: translateY(0);
+                max-height: 100vh;
+            }
+
+            .bgHeaderCollapse {
+                background: #E6F7FB;
+            }
+
+            .boxContent {
+                border-top: none;
+                padding: 10px 0 35px;
+                overflow-y: auto;
+            }
+
+            .accordionItem {
+                padding: 8px 20px;
+                position: relative;
+                z-index: 1;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 20px;
+                    right: 20px;
+                    bottom: 0;
+                    height: 1px;
+                    width: auto;
+                    border-bottom: 1.3px solid #8BD4E9;
+                }
+            }
+        }
+    }
+}
+
+.desktopMode {
+    display: block !important;
+
+    @media only screen and (max-width: 992px) {
+        display: none !important;
+    }
+}
+
+.mobileMode {
+    display: none !important;
+
+    @media only screen and (max-width: 992px) {
+        display: block !important;
+    }
+}

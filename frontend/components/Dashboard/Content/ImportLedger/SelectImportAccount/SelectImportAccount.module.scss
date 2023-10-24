@@ -1,0 +1,186 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: start;
+  color: #000000;
+
+  .title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 140%;
+    color: #3D3D3D;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20;
+    font-size: $px-14;
+
+    .title {
+      font-size: $px-23;
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    font-size: 12px;
+
+    .title {
+      display: none;
+    }
+
+    .balance-label,
+    .balance-value {
+      margin-left: auto;
+
+      &.fit-label {
+        margin-left: unset !important;
+      }
+    }
+  }
+}
+
+.select-content {
+  label {
+    font-weight: 500;
+  }
+
+  .flex-width {
+    min-width: 250px !important;
+
+    span {
+      font-size: 14px !important;
+    }
+
+    @media only screen and (min-width: 1600px) {
+      min-width: $px-250 !important;
+
+      span {
+        font-size: $px-14 !important;
+      }
+    }
+
+    @media only screen and (max-width: 991px) {
+      min-width: 228px !important;
+
+      &.fit-width {
+        min-width: 160px !important;
+      }
+
+      span {
+        font-size: 12px !important;
+      }
+    }
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-10;
+  }
+
+  @media only screen and (max-width: 991px) {
+    flex-direction: column;
+
+    button:last-child {
+      order: -1;
+    }
+  }
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0;
+  border-top: 1px solid #B3B3B3;
+
+  @media only screen and (min-width: 1600px) {
+    padding: $px-13 0;
+    border-top: $px-2 solid #B3B3B3;
+  }
+
+  &:nth-child(4) {
+    border-top: none;
+  }
+}
+
+.review .checkbox-group {
+  padding: 5px 0;
+  border-top: none;
+
+  @media only screen and (min-width: 1600px) {
+    padding: $px-5 0;
+  }
+}
+
+.acc-name-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px 15px;
+  gap: 10px;
+
+  width: 100%;
+  height: 40px;
+  background: #E6F7FB;
+  border-radius: 12px;
+
+  @media only screen and (min-width: 1600px) {
+    adding: $px-16 $px-15;
+    gap: $px-10;
+    height: $px-40;
+    border-radius: $px-12;
+  }
+}
+
+.disableClick {
+  color: #B3B3B3 !important;
+  pointer-events: none;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 15px 0;
+
+  @media only screen and (min-width: 1600px) {
+    margin: $px-15 0 $px-15 0;
+  }
+}
+
+.inputName {
+  position: relative;
+  width: 100%;
+
+  .textCount {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 160%;
+    color: #808689;
+
+    @media only screen and (min-width: 1600px) {
+      top: $px-11;
+      right: $px-15;
+      font-size: $px-11;
+    }
+  }
+}

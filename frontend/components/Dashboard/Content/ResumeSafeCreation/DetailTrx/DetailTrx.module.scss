@@ -1,0 +1,434 @@
+.container {
+  p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    margin: 0;
+    font-size: 14px !important;
+  }
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cosigner-optin {
+  width: 800px;
+  padding: 20px;
+  margin-top: 30px;
+
+  &.noShadow {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+.cosigner-optin-desc {
+  width: 800px;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  &.noShadow {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+.textBold {
+  font-weight: bold !important;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.foundrySafeContainer {
+  width: 40%;
+  padding: 5px;
+  padding-right: 15px;
+  border-right: 1px solid #8BD4E9;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #8BD4E9;
+    padding-bottom: 10px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .content {
+    margin-top: 10px;
+  }
+
+  .item {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.signerContainer {
+  width: 60%;
+  padding: 5px;
+  margin-left: 10px;
+
+  .header {
+    display: flex;
+    border-bottom: 1px solid #8BD4E9;
+    padding-bottom: 10px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .itemRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.textDescription {
+  margin-bottom: 20px !important;
+
+  .optIn {
+    font-weight: bold;
+  }
+
+  .popUp {
+    color: #258BAC;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+.textBottomDesc {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footerContentDesktop {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  padding-bottom: 0px;
+}
+
+.btnOptInPos {
+  margin-top: 0px;
+
+  p {
+    font-family: Poppins !important;
+    font-weight: 600;
+    font-size: 14px !important;
+  }
+}
+
+.btnBackPos {
+  p {
+    font-family: Poppins !important;
+    font-weight: 600;
+    font-size: 14px !important;
+  }
+}
+
+.txWrap {
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 12px !important;
+  }
+
+  span {
+    margin: 0px;
+  }
+
+  .mlTx1 {
+    margin-left: 10px;
+  }
+
+  .mlTx2 {
+    margin-left: 20px;
+  }
+
+  .txWidth1 {
+    width: 140px;
+    text-align: left !important;
+  }
+
+  .txWidth2 {
+    width: 200px;
+    text-align: left !important;
+  }
+}
+
+.textContent {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #000000;
+
+  img {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  &.bold,
+  .bold {
+    font-weight: 700;
+    text-align: center;
+
+    &.blue {
+      color: $primary-color;
+    }
+  }
+
+  &.maxBox {
+    max-width: 170px;
+  }
+
+  .detail {
+    font-weight: 400;
+    font-size: 11px;
+    color: #B3B3B3;
+  }
+}
+
+.mainSafe {
+  width: 800px;
+
+  // margin-top: 34px;
+  .mainContent {
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+
+  .boxProgress {
+    margin-top: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .mainSafe {
+    width: $px-800;
+
+    // margin-top: $px-34;        
+    .mainContent {
+      margin-top: $px-30;
+      margin-bottom: $px-100;
+    }
+
+    .boxProgress {
+      margin-top: $px-10;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .cosigner-optin {
+    width: 100%;
+    border-radius: 0px !important;
+
+    &.noShadow {
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .foundrySafeContainer {
+    width: 100%;
+    padding: 5px;
+    padding-right: 0px;
+    border-right: 0px solid #8BD4E9;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #8BD4E9;
+      padding-bottom: 10px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .content {
+      margin-top: 10px;
+    }
+
+    .item {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .signerContainer {
+    width: 100%;
+    padding: 5px;
+    margin-left: 0px;
+
+    .header {
+      display: flex;
+      border-top: 1px solid #8BD4E9;
+      border-bottom: 0px solid #8BD4E9;
+      padding-top: 10px;
+      padding-bottom: 0px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .itemRight {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
+      }
+    }
+  }
+
+  .cosigner-optin-desc {
+    width: 100%;
+    border-radius: 0px !important;
+    padding: 20px;
+    margin-bottom: 50px;
+
+    &.noShadow {
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  .footerContentDesktop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    padding-bottom: 70px;
+    position: relative;
+  }
+
+  .btnOptInPos {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+
+    p {
+      font-family: Poppins !important;
+      font-weight: 600;
+    }
+  }
+
+  .btnBackPos {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+
+    p {
+      font-family: Poppins !important;
+      font-weight: 600;
+    }
+  }
+
+  .txWrap {
+    .txWidth1 {
+      width: 130px;
+    }
+
+    .txWidth2 {
+      max-width: 114px;
+      width: 100%
+    }
+
+    .mlTx2 {
+      margin-left: 10px;
+    }
+  }
+
+  .textContent {
+    font-size: $px-14;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &.maxBox {
+      max-width: $px-170;
+    }
+
+    img {
+      width: $px-16;
+      height: $px-16;
+    }
+
+    .detail {
+      font-size: $px-11;
+    }
+  }
+
+  .mainSafe {
+    width: 100%;
+    // margin-top: 34px;
+    padding: 0;
+
+    .mainContent {
+      margin-bottom: 0px;
+      margin-top: 12px;
+
+      @media only screen and (min-width: 576px) {
+        margin-top: 25px;
+      }
+    }
+
+    .boxProgress {
+      margin-top: 10px;
+    }
+  }
+}

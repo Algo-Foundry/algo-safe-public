@@ -1,0 +1,211 @@
+.footer {  
+  background: transparent;
+  width: 100%;  
+  padding: 12px 0;
+  z-index: 1;  
+  // box-shadow: 0px -2px 3px 0px rgba(204, 204, 204, 0.30);
+
+  @media only screen and (min-width: 769px) {    
+    padding: $px-14 $px-40 $px-14; //9.846666666666668vw;    
+    // box-shadow: 0px $_px-2 $px-3 0px rgba(204, 204, 204, 0.30);
+  }
+
+  @media only screen and (min-width: 1600px) {
+    padding: $px-14 $px-40 $px-14;// $px-141;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  .wrapper-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100%;
+
+    @media only screen and (min-width: 992px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .footer--left {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      // margin-bottom: 8px;
+      gap: 10px;
+
+      @media only screen and (min-width: 1600px) {
+        // margin-bottom: $px-8; 
+        gap: $px-10;
+      }
+
+      @media only screen and (min-width: 992px) {
+        margin-bottom: 0;
+        flex-direction: row;
+      }
+
+      span {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;        
+        color: #808689;
+        margin-bottom: 4px;
+
+        @media only screen and (min-width: 769px) {
+          font-size: 0.8333333333333334vw;
+        }
+
+        @media only screen and (min-width: 992px) {
+          margin-bottom: 0;
+        }        
+      }
+
+      img{
+        width: 156px;
+        height: 20px;
+        @media only screen and (min-width: 769px) {         
+          width: $px-156;
+          height: $px-20;           
+        }
+      }
+      
+    }
+
+    span.foundry-link {
+      font-family: $font-din-condensed;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: 0.05em;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+      //margin-bottom: 8px;
+      margin-left: 3px;
+
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-18;
+        //margin-bottom: $px-8;
+        margin-left: $px-3;
+      }
+
+      a {
+        &:hover {
+          color: #258BAC;
+        }
+      }
+    }
+
+    span.text-center {
+      font-family: $font-din-condensed;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      text-transform: uppercase;
+      color: $primary-color;
+      margin-bottom: 8px;
+
+      @media only screen and (min-width: 769px) {
+        font-size: 1.25vw;
+      }
+
+      @media only screen and (min-width: 992px) {
+        margin-bottom: 0;
+      }
+
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-18;
+        line-height: $px-27;
+        margin-bottom: $px-8;
+      }
+    }
+
+    .footer--right {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: inherit;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      button {
+        font-weight: 700;
+        font-size: 18px;
+        background-color: transparent;
+        appearance: none;
+        border: 0;
+        padding: 0;
+        color: #414b5a;
+        letter-spacing: 0.05em;
+        line-height: 27px;
+      }
+
+      span {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #414b5a;
+
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160%;
+
+        a {
+          font-size: 12px;
+          font-weight: 400 !important;
+          letter-spacing: unset !important;
+          @media only screen and (min-width: 1600px) {
+            font-size: $px-12;
+          }
+        }
+
+        @media only screen and (min-width: 769px) {
+          margin-right: 1.0416666666666665vw;
+          font-size: 1.25vw;
+        }
+
+        .text-barrier {
+          margin: 0 10px;
+          color: #999999;
+          font-size: 14px;
+
+          @media only screen and (min-width: 769px) {
+            margin: 0 $px-10;
+            font-size: $px-14;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          font-style: normal;
+          font-weight: 700;          
+          line-height: 150%;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: #999999  ;
+        }
+      }
+    }
+  }
+}
+
+.footer.landing {
+  position: relative !important;
+}

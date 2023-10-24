@@ -1,0 +1,40 @@
+.loaderContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 15px solid #dcf4fa;
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotation 2s linear infinite;
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-120;
+    height: $px-120;
+    border: $px-15 solid #dcf4fa;
+  }
+
+  img {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: -12px;
+    top: -13px;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-55;
+      height: $px-55;
+      right: $_px-12;
+      top: $_px-13;
+    }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}

@@ -1,0 +1,77 @@
+.send-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Archivo';
+  font-size: 12px;
+  span {
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20 !important;
+    font-size: $px-12;
+    span {
+      font-size: $px-12;
+    }
+  }
+}
+
+.detail-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .send-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  @media only screen and (min-width: 1600px) {
+    gap: $px-10;
+    .send-info {
+      gap: $px-6;
+    }
+  }
+}
+
+.detail-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media only screen and (min-width: 1600px) {
+    gap: $px-30;
+  }
+  .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    @media only screen and (min-width: 1600px) {
+      gap: $px-10;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .send-detail {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .detail-right {
+    gap: 30px;
+    .btn-wrapper {
+      flex-direction: row;
+      .btn-cofirm {
+        width: 100%;
+      }
+      .btn {
+        width: unset;
+      }
+    }
+  }
+}

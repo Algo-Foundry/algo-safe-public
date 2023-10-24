@@ -1,0 +1,381 @@
+.boxAccordion{
+    width: 100%;    
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;    
+    background: #FFFFFF; 
+    position: relative;
+    @media only screen and (min-width: 1600px) {
+        padding: 0 $px-20;
+    }
+    &.itemHover:hover{        
+        width: 100%;        
+    }
+    &.active{
+        background: #F2F9FB;
+    }
+    &.bgDelete{
+        background: #FEF5F3;        
+        // border: 1px solid #E15173;
+        // @media only screen and (min-width: 1600px) {
+        //     border: $px-1 solid #E15173; 
+        // }
+    }
+    &.isGreyOut{
+        opacity: 0.41;
+    }
+    &.urgent {
+        background: #FFFAE2;
+        // border: 1px solid #F69134;
+        // @media only screen and (min-width: 1600px) {
+        //     border: $px-1 solid #F69134; 
+        // }
+        // .boxContent{
+        //     &.borderActive{                            
+        //         border-top: 1px solid #F69134;  
+        //         @media only screen and (min-width: 1600px) {
+        //             border-top: $px-1 solid #F69134; 
+        //         }              
+        //     }
+        // }
+    }
+    .safe-id {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        min-width: 120px;
+        height: 29px;
+        left: 0px;
+        top: -25px;
+        background: #B8E9F4;
+        box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+        border-radius: 12px;
+        padding: 5px 10px;
+        font-family: 'Archivo';
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 160%;
+        color: #000000;
+    }
+    
+    .accordionItemWrap{
+        align-items: center;
+        width: 692px;
+        gap: 10px;
+        display: flex;  
+        &:nth-child(3) {
+            width: unset !important;
+            flex-grow: 1;
+        }
+        @media only screen and (min-width: 1600px) {
+            gap: $px-10;
+            width:47.638888888888886vw;//$px-692;
+        }
+        @media only screen and (min-width: 992px) and (max-width: 1180px) {
+            width: 70%;
+        }
+    }
+    .accordionItem{
+        display: flex;
+        padding: 20px 0;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        cursor: pointer;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;        
+        color: #000000;
+        @media only screen and (min-width: 1600px) {
+            padding: $px-20 0;
+            gap: $px-10;
+            font-size: $px-14;
+        }
+    }
+    .boxNum{
+        width: 100%;
+        max-width: 24px;
+        @media only screen and (min-width: 1600px) {
+            max-width: $px-24;
+        }
+    }
+    .boxType{
+        width: 100%;
+        max-width: 193px;    
+        @media only screen and (min-width: 1600px) {
+            max-width: $px-193;   
+            svg {
+                height: $px-24 !important;
+                width: $px-24 !important;
+            }
+        } 
+        @media only screen and (min-width: 992px) and (max-width: 1180px) {
+            max-width: 162px;
+        }   
+    }
+    .boxCoin{
+        width: 100%;
+        max-width: 266px;
+        @media only screen and (min-width: 1600px) {
+            max-width: 19.51388888888889vw;//$px-266;    //$px-279;//
+        }  
+    }
+    .boxDate{
+        width: 100%;
+        max-width: 150px;
+        @media only screen and (min-width: 1600px) {
+            max-width: $px-150;    
+        }
+    }
+    .boxMember{
+        width: 100%;
+        max-width: 142px;
+        @media only screen and (min-width: 1600px) {
+            max-width: $px-142;  
+            svg {
+                height: $px-16 !important;
+                width: $px-16 !important;
+            }  
+        }
+    }
+    .boxArrow{
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+        &.active{
+            transform: rotate(-180deg);
+        }
+        // svg {
+        //     // background: black;
+        // }
+        @media only screen and (min-width: 1600px) {
+            svg {
+                height: $px-22 !important;
+                width: $px-22 !important;
+            }
+        }
+    }
+    .boxStatus{
+        width: 100%;
+        max-width: 134px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 6px;
+        @media only screen and (min-width: 1600px) {
+            max-width: $px-134;
+            gap: $px-6;
+        }
+        .dot{
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            @media only screen and (min-width: 1600px) {
+                width: $px-6;
+                height: $px-6;
+            }
+        }        
+    }
+    .boxConfirm{
+        display: none;
+        flex: row;
+        gap: 10px;
+        @media only screen and (min-width: 1600px) {
+            gap: $px-10;
+        }
+    }
+    .pink{
+        color: #E15173;
+        .dot{
+            background-color: #E15173;
+        }
+    }
+    .orange{
+        color: #F69134;
+        .dot{
+            background-color: #F69134;
+        }
+    }
+    .green{
+        color: #028D81;
+        .dot{
+            background-color: #028D81;
+        }
+    }
+    .boxContent{
+        width: 100%;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        @media only screen and (min-width: 1600px) {
+            padding-bottom: $px-20;
+            padding-top: $px-10;
+        }
+        &.borderActive{                            
+            border-top: 1px solid #8BD4E9;
+            @media only screen and (min-width: 1600px) {
+                border-top: $px-1 solid #8BD4E9;  
+            }
+        }
+        &.borderDelete{                            
+            border-top: 1px solid #E15173;
+            @media only screen and (min-width: 1600px) {
+                border-top: $px-1 solid #E15173;  
+            }
+        }
+    }
+    .collapseItems{        
+        overflow: hidden;        
+        transition: max-height .3s;        
+        max-height: 0;
+        &.show{
+            max-height: 100%;
+        }
+    }
+    .top-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 11px 20px;
+        gap: 10px;
+        background: #8bd4e9;
+        @media only screen and (min-width: 1600px) {
+            padding: $px-11 $px-20;
+            gap: $px-10;
+        }
+        .title {
+            font-family: $font-regular;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 160%;
+            @media only screen and (min-width: 1600px) {
+                font-size: $px-12;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .boxAccordion{         
+        padding: 0 8px;         
+        &.itemHover:hover{
+            background: #FFFFFF;
+            border: none;            
+        }
+        // &.bgDelete{
+        //     .collapseItems {
+        //         .accordionItem{
+        //             &::before {
+        //                 border-bottom: 1.3px solid #E15173;
+        //             }
+        //         }
+        //     }
+        // }
+        &.urgent {
+            &:hover {
+                background: #FFFAE2;
+                // border: 1px solid #F69134;
+            }
+            .boxContent{
+                &.borderActive{                            
+                    border-top: none
+                }
+            }
+            .collapseItems {
+                .accordionItem{
+                    &::before {
+                        border-bottom: 1.3px solid #F69134;
+                    }
+                }
+            }
+        }
+        .accordionItemWrap{
+            width: fit-content;
+            align-items: flex-start;
+            align-self: flex-start;
+            gap: 2.5px;
+            display: flex;
+            flex-direction: column;
+            &.wrapMob{
+                margin-left: auto;       
+                align-items: flex-end;
+                flex-direction: column-reverse;
+            }
+            &:nth-child(3) {
+                width: unset;
+            }
+            svg{
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .accordionItem{            
+            padding: 8px 0;                        
+            gap: 12px;            
+            font-size: 12px;    
+            &.itemMob{
+                align-items: flex-start;
+            }       
+        }
+        .boxNum, .boxMember, .boxType, .boxCoin, .boxDate, .boxStatus{
+            min-width: unset;
+            width: unset;
+        }
+        .boxNum{
+            margin-bottom: auto;
+        }
+        .boxDate{
+            color: #B3B3B3;
+        }
+        .boxArrow{
+            margin-left: 12px;
+            transform: rotate(-90deg);            
+            &.active{
+                transform: rotate(-90deg);
+            }
+        }
+        .collapseItems{        
+            overflow: auto;
+            position: fixed;            
+            display: flex;
+            flex-direction: column;     
+            left: 0;
+            top: 0;        
+            max-height: 100vh;
+            height: 100%;
+            width: 100%;
+            transition: transform 0.3s ease;
+            background: inherit;
+            // transform: translateY(calc(105vh - 60px));
+            transform: translateY(calc(105vh - 30px));
+            z-index: 1000;
+            padding-bottom: 110px;
+            &.show{
+                transform: translateY(0);
+                max-height: 100vh;
+            }
+            .bgHeaderCollapse{
+                background: #E6F7FB;
+            }
+            .boxContent{
+                border-top: none;
+                padding: 10px 20px;                
+            }
+            .accordionItem{            
+                padding: 8px 20px;
+                position: relative;
+                z-index : 1;
+                &::before {
+                    content : "";
+                    position: absolute;
+                    left    : 20px;
+                    right    : 20px;
+                    bottom  : 0;
+                    height  : 1px;
+                    width   : auto;
+                    border-bottom: 1.3px solid #8BD4E9;
+                }
+            }
+        }     
+    }
+}

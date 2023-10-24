@@ -1,0 +1,255 @@
+.connect-to-app-container {
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+    border-radius: 0px;
+  }
+}
+
+.title {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: black;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+  }
+
+  @media only screen and (max-width: 991px) {
+    font-size: 12px !important;
+  }
+}
+
+.inputWc {
+  width: 956px;
+  flex-grow: 1;
+  height: 40px;
+  font-size: 16px;
+  background-image: url("/img/icon/wallet-connect.svg");
+  background-size: 24px;
+  background-position: 14px 7px;
+  padding-left: 24px;
+  text-indent: 20px;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  font-family: "DM Sans";
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-16;
+    // width: $px-956;
+    background-size: $px-24;
+    background-position: $px-14 $px-7;
+    padding-left: $px-24;
+    text-indent: $px-20;
+    height: $px-40;
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1410px) {
+    width: 70%;
+  }
+
+  &:focus {
+    background-image: none;
+    text-indent: 0px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+  }
+}
+
+.iconModal {
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+
+  @media only screen and (min-width: 1600px) {
+    margin-bottom: $px-10;
+    width: $px-100;
+    height: $px-100;
+  }
+}
+
+.BtnConnect {
+  display: flex !important;
+  width: 178px;
+  height: 40px;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 600;
+
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-178;
+    height: $px-40;
+    font-size: $px-14;
+  }
+}
+
+.boxDapss {
+  background: #fffdfd;
+  border-radius: 0px 12px 12px 12px;
+  padding: 20px;
+
+  &.borderFull {
+    border-radius: 12px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    background: none;
+    padding: 20px 0px 20px 0px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    border-radius: 0 $px-12 $px-12 $px-12;
+    padding: $px-20;
+
+    &.borderFull {
+      border-radius: $px-12;
+    }
+  }
+}
+
+.titleBox {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  color: #3d3d3d;
+  padding-bottom: 8px;
+  margin-bottom: 9px;
+  border-bottom: 2px solid #8bd4e9;
+
+  @media only screen and (max-width: 991px) {
+    // display: none !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-18;
+    padding-bottom: $px-8;
+    margin-bottom: $px-9;
+    border-bottom: $px-2 solid #8bd4e9;
+  }
+}
+
+.textModal {
+  font-family: $font-regular;
+  font-style: normal;
+  font-size: 14px;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+  }
+}
+
+.signing-transaction-btn {
+  margin-top: 20px;
+  width: 100% !important;
+
+  @media only screen and (min-width: 992px) {
+    width: 178px !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    margin-top: $px-20;
+    width: $px-178 !important;
+  }
+}
+
+.connected-dapp {
+  margin-top: 40px;
+
+  @media only screen and (min-width: 1600px) {
+    margin-top: $px-40;
+  }
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 10px;
+    width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+    border-radius: 0px !important;
+  }
+}
+
+.connected-dapps-desc {
+  font-family: $font-regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  margin: 20px 0;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+    margin: $px-20 0;
+  }
+}
+
+.connected-dapps-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 20px;
+  align-items: center;
+  justify-items: center;
+
+  > div {
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1304px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    row-gap: $px-20;
+    column-gap: $px-30;
+  }
+}
+
+.btnDisconnectShow {
+  display: inline;
+
+  @media only screen and (max-width: 991px) {
+    display: none !important;
+  }
+}
+
+.connectedTextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btnDisconnectAll {
+  display: none;
+
+  @media only screen and (max-width: 991px) {
+    display: inline !important;
+    font-family: "DM Sans" !important;
+    font-size: 12px !important;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #258bac;
+  }
+}

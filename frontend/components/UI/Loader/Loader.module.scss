@@ -1,0 +1,47 @@
+.boxLoader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .wrapLoader {
+    position: relative;
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+
+    img.ledger-icon {
+      top: 55px;
+      left: 20px;
+      position: absolute;
+      width: 190px;
+      height: 125px;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .wrapLoader, svg{
+      width: 173.73px;
+      height: 173.73px;
+
+      &.ledger {
+        width: 240px;
+        height: 240px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    .wrapLoader, svg {
+      position: relative;
+      width: 240px;
+      height: 240px;
+    }
+  }
+
+  .textLoader{
+    color: #42A1B6;
+    font-weight: bold;
+  }           
+}

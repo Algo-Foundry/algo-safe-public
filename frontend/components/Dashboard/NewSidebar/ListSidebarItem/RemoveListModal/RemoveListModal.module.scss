@@ -1,0 +1,146 @@
+.safe-remove-popup {
+  display: flex;
+  flex-direction: column;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+}
+
+.content-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  .wrapLoader{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+  .safe-address {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    span {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    b{
+      word-break: break-all;
+    }
+  }
+  span.text-info {
+    font-weight: 400;
+    color: #000000;
+  }
+}
+.textLoader{
+  color: #42A1B6;
+  margin-top: 20px;
+  @media only screen and (min-width: 1600px) {
+    margin-top: $px-20;
+  }
+}
+.iconModal{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  @media only screen and (min-width: 1600px) {
+    width: $px-100;
+    height: $px-100;
+    margin-bottom: $px-10;
+  }
+}
+.boxText{
+  padding: 20px 0;
+  border-top: 1px solid #8BD4E9;
+  border-bottom: 1px solid #8BD4E9;
+  @media only screen and (min-width: 1600px) {
+    padding: $px-20 0;
+    border-top: $px-1 solid #8BD4E9;
+    border-bottom: $px-1 solid #8BD4E9;
+  }
+}
+.content-bottom {
+  display: flex;
+  flex-direction: column;
+  .btn-wrapper {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    .btn-cancel {
+      width: 100%;
+      order: 1;
+    }
+    .btn-proceed {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) { 
+  .content-top {
+    .safe-address {
+      margin: 16px 0;
+      @media only screen and (min-width: 1600px) {
+        margin: $px-16 0;
+      }
+    }
+  }
+  .content-bottom {
+    .btn-wrapper {
+      flex-direction: unset;
+      .btn-cancel {
+        width: unset;
+        order: 0;
+      }
+      .btn-proceed {
+        width: unset;
+      }
+    }
+  }
+}
+
+.box-icon{  
+  position: relative;
+  color: #E15173;
+  svg{
+    width: 100px;
+    height: 100px;
+    @media only screen and (min-width: 1600px) {
+      width: $px-100;
+      height: $px-100;
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .safe-remove-popup {    
+    font-size: $px-14;    
+  }
+  
+  .content-top {              
+    .wrapLoader{
+      width: $px-100;
+      height: $px-100;      
+    }
+    .safe-address {     
+      gap: $px-5;
+      span {
+        font-size: $px-14;        
+      }
+    }
+  }
+  
+  .content-bottom {
+    .btn-wrapper {
+      padding-top: $px-20;      
+      gap: $px-10;      
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.modalTx {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    .iconModal {
+        width: 100px;
+        height: 100px;
+
+        @media only screen and (min-width: 1600px) {
+            width: $px-100;
+            height: $px-100;
+        }
+    }
+
+    .textModal {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #000000;
+
+        @media only screen and (min-width: 1600px) {
+            font-size: $px-14;
+        }
+
+        &.big {
+            font-size: 14px;
+
+            @media only screen and (min-width: 1600px) {
+                font-size: $px-14;
+            }
+        }
+
+        img {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+
+            @media only screen and (min-width: 1600px) {
+                width: $px-16;
+                height: $px-16;
+            }
+        }
+    }
+
+    .bold {
+        font-weight: 700;
+    }
+
+    .collapse {
+        color: #258BAC;
+        cursor: pointer;
+        text-decoration: underline;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-top: -3px;
+
+            &.rotate {
+                transform: rotate(180deg);
+            }
+
+            @media only screen and (min-width: 1600px) {
+                width: $px-20;
+                height: $px-20;
+                margin-top: $_px-3;
+            }
+        }
+    }
+
+    .txContent {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (min-width: 1600px) {
+            margin-top: $px-20;
+            gap: $px-4;
+        }
+    }
+
+    .errorDetailsWrapper {
+        margin-top: 10px;
+        width: 100%;
+        padding: 16px;
+
+        background: $blue-5;
+        border-radius: 12px;
+
+        @media only screen and (min-width: 1600px) {
+            margin-top: $px-10;
+            padding: $px-16;
+            border-radius: $px-12;
+        }
+    }
+
+    .errorDetails {
+        max-height: 312px;
+        overflow-y: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        word-break: break-word;
+
+        @media only screen and (min-width: 1600px) {
+            max-height: $px-312;
+            gap: $px-10;
+            font-size: $px-14;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .modalSafeCont {
+        .textModal {
+            text-align: center;
+        }
+    }
+}

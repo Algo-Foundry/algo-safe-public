@@ -1,0 +1,105 @@
+.inputMob{
+    padding-right: 55px !important;
+}
+.imgAdr{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+.walletIcon{
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #B3B3B3;
+    svg{
+      width: 20px;
+      height: 20px;
+    }            
+}
+.outer{
+    overflow-y: auto;
+}
+.boxAutoSuggest{
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    max-height: 190px;    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(92, 92, 92, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    scrollbar-color: transparent;
+    z-index: 10;
+    .itemSuggest{
+        padding: 0px 10px 0px 10px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        height: 42px;
+        width: 100%;
+        &:hover{
+            background: #E6F7FB;
+        }
+    }
+    .imgSuggest{
+        width: 20px;
+        height: 20px;
+    }
+}
+.textSuggest{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #000000;
+}
+@media only screen and (max-width: 991px) {
+    .inputMob{
+        padding-right: 57px !important;
+    }    
+}
+@media only screen and (min-width: 1600px) {
+    .inputMob{
+        padding-right: $px-55 !important;
+    }
+    .imgAdr{
+        position: absolute;
+        right: $px-32;
+        width: $px-20;
+        height: $px-20;
+    }
+    .walletIcon{
+        right: $px-6;
+        svg{
+          width: $px-20;
+          height: $px-20;
+        }            
+    }
+    .boxAutoSuggest{        
+        max-height: $px-190;   
+        box-shadow: 0 0 $px-8 rgba(92, 92, 92, 0.3);
+        border-radius: $px-12;
+        padding: 0;
+        .itemSuggest{
+            padding: 0 $px-10 0 $px-10;
+            gap: $px-10;
+            height: $px-42;            
+        }
+        .imgSuggest{
+            width: $px-20;
+            height: $px-20;
+        }
+    }
+    .textSuggest{        
+        font-size: $px-14;
+    }
+}

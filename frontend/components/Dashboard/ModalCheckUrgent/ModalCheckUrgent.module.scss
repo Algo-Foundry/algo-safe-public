@@ -1,0 +1,41 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+}
+
+.close-btn {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.text-discribe {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+  color: #000000;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+  }
+}
+
+.box-icon {
+  color: #FBD037;
+  margin: 0 auto;
+
+  svg {
+    width: 100px;
+    height: 100px;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-100;
+      height: $px-100;
+    }
+  }
+}

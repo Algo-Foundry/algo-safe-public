@@ -1,0 +1,142 @@
+.transaction-status {
+  display: flex;
+  flex-direction: column;
+  // width: 100%;
+  gap: 10px;
+  @media only screen and (min-width: 992px) {
+    gap: $px-10;
+  }
+  @media only screen and (min-width: 1600px) {
+    gap: $px-6;
+  }
+  .status--number {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    @media only screen and (min-width: 1600px) {
+      gap: $px-6;
+    }
+  }
+  
+  .show-txn-detail {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    font-weight: 700;
+    text-decoration-line: underline;
+    color: #000000;
+    img {
+      width: 16px;
+      height: 16px;
+      transform: rotate(180deg);
+      &.arrowUp {
+      transform: rotate(0);
+      }
+    }
+    @media only screen and (min-width: 1600px) {
+      gap: $px-6;
+      img {
+        width: $px-16;
+        height: $px-16;
+      }
+      svg {
+        width: $px-22;
+        height: $px-22;
+      }
+    }
+  }
+
+  .collapse-timeline {
+    margin-top: 10px;
+    padding-left: 20px;
+    @media only screen and (min-width: 1600px) {
+      margin-top: $px-10;
+      padding-left: $px-20;
+    }
+  }
+}
+.ledgerBoxIcon{
+  margin-top: 25px;
+  margin-bottom: -20px;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  @media only screen and (min-width: 1600px) {
+    gap: $px-10;
+    margin-top: $px-25;
+    margin-bottom: $_px-20;
+  }
+  .ledgerIcon{
+    width: 50px;
+    height: auto;
+    @media only screen and (min-width: 1600px) {
+      width: $px-50;
+    }
+  }
+  .ledgerText{
+    color: #258BAC;
+    font-size: 14px;    
+    line-height: 140%;
+    max-width: 331px;
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14;          
+      max-width: $px-331;
+    }
+  }
+}
+.btn-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  p {
+    margin: 0;
+    font-size: 14px;
+    height: 25px;
+  }
+  .btn-disabled{
+    background-color: transparent;
+    padding-top: 6px;
+  }
+  .btn {
+    border-width: 1px;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+
+  }
+  @media only screen and (min-width: 992px) {
+    margin-top: 30px;
+    flex-direction: row;
+    p {
+      height: 24px;
+    }
+    .btn-cofirm {
+      width: 100%;
+    }
+    .btn {
+      width: 178px;
+    }
+  }
+  @media only screen and (min-width: 1600px) {
+    margin-top: $px-30;
+    gap: $px-10;
+    p {
+      font-size: $px-14;
+      height: $px-24;
+    }
+    .btn {
+      border-width: $px-1;
+      width: $px-178;
+      font-size: $px-14;
+    }
+  }
+}

@@ -1,0 +1,419 @@
+.confirmation-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 12px;
+  .wrapSelect{
+    display: flex;    
+    gap: 20px;
+    align-items: center;
+    span{
+      width: 220px;
+    }
+  }
+}
+.owner-confirmation{
+  padding: 20px;
+  border-radius: 12px;
+    .inputWrap{
+        display: flex;
+        flex-direction: row;        
+    }
+    .errorName{
+      // width: 100%;
+      // cursor: pointer;
+      font-family: $font-regular;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 160%;      
+      text-align: left;
+      color: #E15173;
+      word-break: break-all;
+    }
+    .boxContent{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        .name{
+          width: 210px;
+          position: relative;
+            .textCount{
+              position: absolute;
+              top: 42px;
+              right: 15px;
+              font-family: $font-regular;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 11px;
+              line-height: 160%;            
+              color: #808689;
+          }
+        }
+        .address{
+          width: 530px;
+          position: relative;
+          margin-left: 20px;
+          flex-direction: row;
+          label{
+            position: relative;
+            width: fit-content;
+          }
+          .imgAdr{
+            position: absolute;
+            right: 32px;
+            top: 40px;
+            width: 20px;
+            height: 20px;
+          }
+          .walletIcon{
+            position: absolute;
+            right: 6px;
+            top: 37px;
+            color: #B3B3B3;
+            svg{
+              width: 20px;
+              height: 20px;
+            }            
+          }
+          .infoBox{
+            position: absolute;
+            left: calc(100% + 8px);
+            top: 50%;
+            transform: translateY(-50%);
+            color: #414B5A;
+            z-index: 9;
+            &:hover{
+              color: #258BAC;
+              span, span::before {
+                opacity: 1;
+              }
+            }
+            svg{
+              width: 13px;
+              height: 13px;
+            }
+            span {
+              background: #FFF9F0;
+              border-radius: 12px;
+              position: absolute;
+              top: 150%;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 210px;
+              padding: 9px 8px;
+              text-align: center;
+              opacity: 0;
+              transition: 0.3s;
+              font-family: 'DM Sans';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 140%;
+              color: #000000;
+            }
+            span::before {
+              position: absolute;
+              content: "";
+              border-width: 10px;              
+              border-style: solid;
+              left: 50%;
+              transform: translateX(-50%);
+              opacity: 0;
+              top: -20px;
+              border-color: transparent transparent #FFF9F0;
+            }
+          }
+        }
+        .inputMob{
+          padding-right: 55px;
+        }
+        .delete{
+          position: absolute;      
+          display: flex;
+          align-items: flex-end;          
+          position: absolute;
+          right: -31px;
+          bottom: 10px;
+          img{
+            width: 24px;
+            cursor: pointer;
+          }
+        }        
+    }
+    .inputSafe{
+        position: relative;
+        max-width: 400px;
+        .textCount{
+            position: absolute;
+            top: 42px;
+            right: 15px;
+            font-family: $font-regular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 160%;            
+            color: #808689;
+        }
+    }
+    .textContent{
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #000000;
+        &.bold, .bold{            
+            font-weight: 700;
+        }
+    }
+    .btnConnect{
+      width: 100% !important;
+      height: 40px;
+      font-family: 'Poppins' !important;
+      font-size: 14px !important;
+      font-weight: 600;
+    }        
+}
+
+@media only screen and (max-width: 991px) {
+  .confirmation-container{
+    .wrapSelect{
+      justify-content: space-between;
+      width: 100%;
+      span{
+        width: 195px;
+      }
+    }
+  }
+  .btnDropDown{
+    height: 40px !important;
+  }
+  .owner-confirmation{
+    min-width: unset;
+    width: 100%;
+    border-radius: 0;
+    .textContent, .errorName{
+      font-size: 12px;
+    }
+    .inputWrap{
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #8BD4E9;
+      box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.25);
+      margin-bottom: -15px;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+    .boxContent{      
+      .name{
+        width: 100%;
+      }
+      .inputMob{
+        padding-right: 57px;
+      }
+      .address{
+        width: 100%;        
+        margin-left: 0;        
+        .imgAdr{          
+          top: 38px;
+        }
+        .walletIcon{ 
+          top: 34px;           
+        }
+      }
+      .delete{
+          margin-bottom: 10px;
+          position: relative;
+          right: 0;
+          bottom: 0;
+      }        
+    }    
+  }  
+}
+.btnDropDown{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 40px;    
+  border-radius: 8px;
+  padding: 4px 12px;
+  color: #000000;
+  background: #E6F7FB;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  border: none;
+  span{
+    width: unset !important;
+  }
+  svg{
+    width: 20px;
+    height: 20px;
+  } 
+  &:active, &:focus{
+    border: 1px solid #8BD4E9;
+  }
+}
+.dropdownSort{    
+  cursor: pointer;    
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 10;
+  width: 120px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 8px rgba(92, 92, 92, 0.3);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #000000;
+  svg{
+    width: 20px;
+    height: 20px;
+  }
+  span{
+    width: unset !important;
+  }
+  .wrapTextBtn{
+    display: flex;
+    padding: 7px 12px 9px;
+    justify-content: space-between;
+    align-items: center;
+    &.select{
+      background: #E6F7FB;
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .btnDropDown{    
+    width: $px-120;
+    height: $px-40;    
+    border-radius: $px-8;
+    padding: $px-4 $px-12;    
+    font-size: $px-14;   
+    svg{
+      width: $px-20;
+      height: $px-20;
+    } 
+    &:active, &:focus{
+      border: $px-1 solid #8BD4E9;
+    }
+  }
+  .dropdownSort{    
+    top: calc(100% + $px-6);
+    width: $px-120;
+    box-shadow: 0 0 $px-8 rgba(92, 92, 92, 0.3);
+    border-radius: $px-8;
+    font-size: $px-14;
+    svg{
+      width: $px-20;
+      height: $px-20;
+    }
+    .wrapTextBtn{
+      padding: $px-7 $px-12 $px-9;
+    }
+  }
+  .confirmation-container{    
+    gap: $px-20;
+    .wrapSelect{
+      gap: $px-20;
+      span{
+        width: $px-220;
+      }
+    }
+  }
+  .owner-confirmation{
+    padding: $px-20;
+    border-radius: $px-12;
+      .errorName{        
+        font-size: $px-10;        
+      }
+      .boxContent{          
+          gap: $px-12;          
+          .name{
+            width: $px-210;            
+              .textCount{
+                position: absolute;
+                top: $px-42;
+                right: $px-15;                
+                font-size: $px-11;                
+            }
+          }
+          .address{
+            width: $px-530;            
+            margin-left: $px-20;            
+            .imgAdr{
+              position: absolute;
+              right: $px-32;
+              top: $px-40;
+              width: $px-20;
+              height: $px-20;
+            }
+            .walletIcon{
+              right: $px-6;
+              top: $px-37;
+              svg{
+                width: $px-20;
+                height: $px-20;
+              }            
+            }
+            .infoBox{              
+              left: calc(100% + $px-8);
+              svg{
+                width: $px-13;
+                height: $px-13;
+              }
+              span {
+                border-radius: $px-12;                
+                width: $px-210;
+                padding: $px-9 $px-8;
+                font-size: $px-12;
+              }
+              span::before {                
+                border-width: $px-10;                              
+                top: $_px-20;
+              }
+            }
+          }
+          .inputMob{
+            padding-right: $px-55;
+          }
+          .delete{                           
+            right: $_px-31;
+            bottom: $px-10;
+            img{
+              width: $px-24;              
+            }
+          }        
+      }
+      .inputSafe{          
+          max-width: $px-400;
+          .textCount{
+              position: absolute;
+              top: $px-42;
+              right: $px-15;              
+              font-size: $px-11;              
+          }
+      }
+      .textContent{          
+          font-size: $px-14;          
+      }
+      .btnConnect{        
+        height: $px-40;
+        font-size: $px-14 !important;
+      }        
+    }
+}

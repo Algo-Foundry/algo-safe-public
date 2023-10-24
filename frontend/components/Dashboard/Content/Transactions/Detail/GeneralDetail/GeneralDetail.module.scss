@@ -1,0 +1,202 @@
+.general-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "DM Sans";
+  font-size: 12px;
+  span {
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20 !important;
+    font-size: $px-12;
+    span {
+      font-size: $px-12;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-detail {
+    max-height: 500px; 
+    height: 100%;
+    padding: 0 20px 20px 20px;
+  }
+}
+
+.detail-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @media only screen and (min-width: 1600px) {
+    gap: $px-10;
+  }
+  .send-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    @media only screen and (min-width: 1600px) {
+      gap: $px-6;
+    }
+  }
+  .initiator-info {
+    display: flex;
+    gap: 0;
+    label {
+      min-width: 105px;
+      @media only screen and (min-width: 1600px) {
+        min-width: $px-105;
+      }
+    }
+    .initiator-value {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 6px;
+      @media only screen and (min-width: 1600px) {
+        gap: $px-6;
+      }
+      .value-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        @media only screen and (min-width: 1600px) {
+          gap: $px-8;
+        }
+        .box-icon-sm{
+          width: 16px;
+          height: 16px;
+          position: relative;
+          @media only screen and (min-width: 1600px) {
+            width: $px-16;
+            height: $px-16;
+          }      
+        }
+      }
+      // span {
+      //   max-width: 322px;
+      //   @media only screen and (min-width: 1600px) {
+      //     max-width: $px-322;
+      //   }
+      // }
+    }
+    &.initiator-space {
+      gap: 55px;
+      @media only screen and (min-width: 1600px) {
+        gap: $px-55;
+      }
+    }
+  }
+  .nft-info {
+    display: flex;
+    gap: 55px;
+    @media only screen and (min-width: 1600px) {
+      gap: $px-55;
+    }
+    @media only screen and (max-width: 1280px) {
+      gap: 20px;
+    }
+    label {
+      min-width: 85px;
+      @media only screen and (min-width: 1600px) {
+        min-width: $px-85;
+      }
+      @media only screen and (max-width: 1280px) {
+        min-width: 40px;
+      }
+    }
+    .nft-asset {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      padding: 0px;
+      gap: 8px;
+      align-items: center;
+      background: rgba(246, 249, 250, 0.85);
+      backdrop-filter: blur(7.51462px);
+      border-radius: 6px;
+      @media only screen and (min-width: 1600px) {
+        height: $px-50;
+        gap: $px-8;
+        border-radius: $px-6;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        @media only screen and (min-width: 1600px) {
+          width: $px-50;
+          height: $px-50;
+          border-top-left-radius: $px-6;
+          border-bottom-left-radius: $px-6;
+        }
+      }
+      span {
+        font-weight: 700;
+        text-decoration-line: underline;
+        color: #258BAC;
+      }
+      p {
+        padding: 0;
+        margin: 0;
+        color: #838383;
+      }
+    }
+  }
+}
+
+.detail-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 100px;
+  @media only screen and (min-width: 1600px) {
+    gap: $px-30;
+    padding-bottom: $px-100;
+  }
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 0;
+  }
+  .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    @media only screen and (min-width: 1600px) {
+      gap: $px-10;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .general-detail {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .detail-left {
+    .initiator-value {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+  .detail-right {
+    gap: 30px;
+    padding-bottom: 0;
+    .btn-wrapper {
+      flex-direction: row;
+      .btn-cofirm {
+        width: 100%;
+      }
+      .btn {
+        width: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  // overflow-y: auto;
+  // max-height: 600px;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  color: #000000;
+  white-space: break-spaces;
+  word-break: break-word;
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-12;
+  }
+}

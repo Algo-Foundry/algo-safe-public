@@ -1,0 +1,16 @@
+.safe-id {
+  display: flex;
+  gap: 5px;
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  color: #000000;
+  @media only screen and (min-width: 992px) {
+    font-size: 14px;
+  }
+
+  &.bold {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,129 @@
+.app-transaction-detail {
+  width: 100%;
+  .show-txn-detail {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    font-weight: 500;
+    text-decoration-line: underline;
+    color: #258BAC;
+    img {
+      width: 16px;
+      height: 16px;
+      transform: rotate(180deg);
+      &.arrowUp {
+      transform: rotate(0);
+      }
+    }
+    @media only screen and (min-width: 1600px) {
+      gap: $px-6;
+      img {
+        width: $px-16;
+        height: $px-16;
+      }
+      svg {
+        height: $px-22;
+        width: $px-22;
+      }
+    }
+  }
+}
+
+.show-txn-detail-text{
+  color: #000000;
+  font-size: 12px;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  line-height: 160%;
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-12;
+  }
+}
+
+.spaceform {
+  gap: 14px;
+}
+
+.body-2 {
+  font-family: 'DM Sans';
+  .txn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media only screen and (min-width: 1600px) {
+      gap: $px-20;
+    }
+  }
+}
+
+.txn-card {
+  padding: 10px 20px;
+  background: #B8E9F4;
+  box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+  border-radius: 12px;
+
+  font-family: 'DM Sans';
+
+  @media only screen and (max-width: 991px) {
+    border-radius: 0;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    padding: $px-10 $px-20;
+    box-shadow: 0px $px-2 $px-4 rgba(92, 92, 92, 0.25);
+    border-radius: $px-12;
+  }
+
+  pre {
+    max-height: 300px;
+    @media only screen and (min-width: 1600px) {
+      max-height: $px-300;
+    }
+  }
+
+  .txn-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 160%;
+    @media only screen and (min-width: 1600px) {
+      gap: $px-14;
+      font-size: $px-12;
+      svg {
+        height: $px-22;
+        width: $px-22;
+      }
+    }
+  }
+
+  .txn-body {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    font-size: 12px;
+    line-height: 160%;
+    word-wrap: break-word;
+    b {
+      min-width: 80px;
+    }
+    @media only screen and (min-width: 1600px) {
+      margin-top: $px-12;
+      gap: $px-12;
+      font-size: $px-12;
+      b {
+        min-width: $px-80;
+      }
+    }
+    .show-raw {
+      color: #258bac;
+      text-decoration-line: underline;
+      cursor: pointer;
+    }
+  }
+}

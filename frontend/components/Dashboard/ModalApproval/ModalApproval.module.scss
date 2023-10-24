@@ -1,0 +1,264 @@
+.modal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+
+  label {
+    font-weight: 700;
+  }
+
+  label,
+  input {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20;
+    font-size: $px-14;
+
+    label,
+    input {
+      font-size: $px-14;
+    }
+  }
+
+  .borderLine {
+    display: flex;
+    align-items: center;
+    gap: 8px !important;
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-8 !important;
+
+      svg {
+        width: $px-12;
+        height: $px-12;
+      }
+    }
+  }
+
+  .btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .btn {
+      width: 100%;
+      min-height: 40px;
+
+      @media only screen and (min-width: 768px) {
+        width: auto;
+        min-height: 36px;
+      }
+    }
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-10;
+
+      .btn {
+        min-height: $px-36;
+      }
+    }
+  }
+}
+
+.modal-header {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.modal-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans' !important;
+    font-size: 14px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20;
+
+    p {
+      font-size: $px-14;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.address {
+  align-self: flex-end;
+
+  span {
+    font-size: 14px;
+    line-height: 160%;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    span {
+      font-size: $px-14;
+    }
+  }
+}
+
+.option-asset {
+  display: flex;
+  gap: 6px;
+
+  .asset-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-6;
+
+    .asset-icon {
+      width: $px-20;
+      height: $px-20;
+    }
+  }
+}
+
+.tooltip-container {
+  margin-top: -2px;
+
+  @media only screen and (min-width: 1600px) {
+    margin-top: $_px-2;
+
+    svg {
+      width: $px-16;
+      height: $px-17;
+    }
+  }
+}
+
+.help-icon {
+  color: $grey-1;
+}
+
+.help-icon:hover {
+  color: $blue-2;
+}
+
+.asset-token {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 160%;
+  color: #000000;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-10;
+    font-size: $px-18;
+  }
+}
+
+.linkIcon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-16;
+    height: $px-16;
+  }
+}
+
+.ledgerContent {
+  display: flex;
+  align-content: center;
+  margin-bottom: 20px;
+
+  p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #258BAC;
+  }
+
+  .imgWrapper {
+    width: 60px;
+    height: 60px;
+    position: relative;
+  }
+
+  .textDesc {
+    margin-left: 5px;
+    width: 272px;
+    height: 60px;
+
+    p {
+      margin: 0 !important;
+    }
+  }
+
+  .textBold {
+    font-weight: 700;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    p {
+      font-size: $px-14;
+    }
+
+    .imgWrapper {
+      width: $px-60;
+      height: $px-60;
+    }
+
+    .textDesc {
+      margin-left: $px-5;
+      width: $px-272;
+      height: $px-60;
+    }
+  }
+}
+
+.textWrapper {
+  padding: 0 10px 0 10px;
+
+  @media only screen and (min-width: 1600px) {
+    padding: 0 $px-10 0 $px-10;
+  }
+}
+
+.btnWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

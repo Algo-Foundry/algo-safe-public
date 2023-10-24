@@ -1,0 +1,138 @@
+.container {
+  p {
+    margin: 0;
+    font-family: "DM Sans";
+    font-size: 14px;
+  }
+
+  width: 100%;
+  background: #FEF5F3;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 20px;
+    border-radius: 0px !important;
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    p {
+      font-size: $px-14 !important;
+    }
+
+    padding: $px-20;
+    border-radius: $px-10;
+    margin-top: $px-10;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 70%;
+
+  @media only screen and (max-width: 991px) {
+    width: 100% !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-10;
+  }
+}
+
+.titleHeader {
+  font-family: 'Poppins' !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px !important;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-18 !important;
+  }
+  @media only screen and (max-width: 991px) {
+    font-size: 16px !important;
+  }
+}
+
+.btnWrapper {
+  @media only screen and (max-width: 991px) {
+    width: 100% !important;
+  }
+}
+
+.disabledBtn {
+  opacity: 0.4;
+  cursor: not-allowed; 
+}
+
+.btnStyles {
+  @media only screen and (max-width: 991px) {
+    margin-top: 10px;
+    width: 100% !important;
+  }
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 6.27px;
+  width: 178px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 2px solid #E15173;
+  box-shadow: 0px 2px 4px rgba(92, 92, 92, 0.25);
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  @media only screen and (min-width: 1600px) {
+    padding: $px-5;
+    width: $px-178;
+    height: $px-40;
+    border: $px-2 solid #E15173;
+    border-radius: $px-8;
+  }
+
+  .text {
+    width: 50px;
+    height: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E15173;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-50;
+      height: $px-15;
+      font-size: $px-15;
+    }
+  }
+}
+
+.iconStyles {
+  width: 16px;
+  height: 16px;
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-16;
+    height: $px-16;
+  }
+}

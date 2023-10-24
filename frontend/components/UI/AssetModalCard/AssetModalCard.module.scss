@@ -1,0 +1,92 @@
+.token-card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--black, #000);
+  font-size: 0.875rem;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+    gap: $px-12;
+  }
+  .smallText{
+    font-size: 12px;
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-12;     
+    } 
+  }
+
+  .header {
+    font-weight: 700;
+  }
+
+  .subtitle {
+    opacity: 0.5;
+  }  
+
+  .nft-image-wrap {
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: auto;
+      height: 109%;      
+    }
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-40;
+      height: $px-40;
+    }
+
+    .nftBlur {
+      width: 100%;
+      height: 100%;
+      background: #6F6F6FB2;
+      position: absolute;
+    }
+  }
+
+  .imgToken {
+    width: 20px;
+    height: auto;
+    @media only screen and (min-width: 1600px) {
+      width: $px-20;
+    }
+  }
+}
+.amount{
+  margin-left: auto;
+}
+.verifIcon{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  @media only screen and (min-width: 1600px) {
+    width: $px-16;
+    height: $px-16;
+  }
+}
+.iconWrapper {
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    svg {
+      width: $px-24;
+      height: $px-24;
+    }
+  }
+}

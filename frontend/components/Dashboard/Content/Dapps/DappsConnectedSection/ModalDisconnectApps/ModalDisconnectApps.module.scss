@@ -1,0 +1,53 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20;
+  }
+
+  .desc {
+    font-family: $font-regular;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14;
+    }
+  }
+
+  .warning {
+    font-family: $font-regular;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #e15173;
+    border: 2px solid #e15173;
+    border-radius: 8px;
+    padding: 5px 12px;
+    align-items: center;
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14;
+      border: $px-2 solid #e15173;
+      border-radius: $px-8;
+      padding: $px-5 $px-12;
+      svg {
+        width: $px-20;
+        height: $px-20;
+      }
+    }
+  }
+
+  .btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    @media only screen and (min-width: 1600px) {
+      gap: $px-10;
+    }
+  }
+}

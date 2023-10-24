@@ -1,0 +1,44 @@
+.detailsNftMobile{
+  position: fixed;
+  bottom: -100vh;//calc(-100vh + 60px);  
+  left: 0;
+  transition: bottom 0.4s ease-in-out;
+  z-index: 1051;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;//calc(100vh - 60px);
+  background: #FFFDFD;
+  &.inUp{
+    bottom: 0;
+  }
+  .headerMobileNft{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+    border-bottom: 2px solid #B8E9F4;
+    .textHeader{
+      font-family: 'Archivo';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 160%;      
+    }    
+    svg{
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+  .closeNftDetail{
+    color: #000000;
+  }
+}
+.contentDetailMobile{
+  padding: 20px;
+  overflow-y: auto;
+  //position: relative;
+}

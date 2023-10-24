@@ -1,0 +1,82 @@
+.modalLoadingCont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    overflow-x: hidden;
+    .textModal {
+        font-family: $font-regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160%;
+        color: #000000;
+        @media only screen and (min-width: 1600px) {
+            font-size: $px-12;
+        }
+    }
+    .iconModal{
+        margin-top: 21px;
+        margin-bottom: 30px;
+        width: 100px;
+        height: 100px;
+        @media only screen and (min-width: 1600px) {
+            margin-top: $px-21;
+            margin-bottom: $px-30;
+            width: $px-100;
+            height: $px-100;
+            
+        }
+    }
+    .warningInfo {
+        display: flex;
+        img {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+        }
+        @media only screen and (min-width: 1600px) {
+            img {
+                height: $px-16;
+                width: $px-16;
+                margin-top: $px-3;
+                margin-right: $px-10;
+            }
+        }
+    }
+    .loader1 {
+        margin-top: 21px;
+        margin-bottom: 30px;
+        position: relative;
+        width : 100px;
+        height: 100px;
+        border: 15px solid #dcf4fa;        
+        border-radius: 50%;
+        display: inline-block;
+        animation: rotation 2s linear infinite;     
+        @media only screen and (min-width: 1600px) {
+            margin-top: $px-21;
+            margin-bottom: $px-30;
+            width: $px-100;
+            height: $px-100;
+            border: $px-15 solid #dcf4fa;  
+        }   
+        img{
+            width:47.73px;
+            height:47.73px;
+            position: absolute;
+            right: -12px;
+            top: -13px;
+            @media only screen and (min-width: 1600px) {
+                width: $px-47_73;
+                height: $px-47_73;
+                right: $_px-12;
+                top: $_px-13;
+            }
+        }
+      }  
+}
+@keyframes rotation {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+  }

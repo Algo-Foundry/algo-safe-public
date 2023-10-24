@@ -1,0 +1,186 @@
+.rename-popup {
+  display: flex;
+  flex-direction: column;
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+  color: #000000;
+
+  .borderNone {
+    border: none !important;
+  }
+}
+.pInput{
+  padding-right: 58px;
+  @media only screen and (min-width: 1600px) {
+    padding-right: $px-58;
+  }
+}
+.content-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid #8bd4e9;
+  padding-bottom: 20px;
+  gap: 20px;
+
+  .ledger-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    b{
+      word-break: break-all;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+
+.wrapLoader {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.textLoader {
+  color: #42a1b6;
+}
+
+.text-info {
+  font-weight: 400;
+  color: #000000;
+  padding: 20px 0;
+}
+
+.textWarn {
+  color: #e15173 !important;
+  border: 1px solid #e15173;
+}
+
+.boxWarn {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  color: #e15173;
+  text-align: start;
+}
+
+.iconModal {
+  width: 100px;
+  height: 100px;
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-100;
+    height: $px-100;
+  }
+}
+
+.content-bottom {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #8bd4e9;
+
+  .btn-wrapper {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .btn-cancel {
+      width: 100%;
+      order: 1;
+    }
+
+    .btn-save {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .content-top {
+    .ledger-content {
+      @media only screen and (min-width: 1600px) {
+        margin: $px-10 0;
+      }
+    }
+  }
+
+  .content-bottom {
+    .btn-wrapper {
+      flex-direction: unset;
+
+      .btn-cancel {
+        width: unset;
+        order: 0;
+      }
+
+      .btn-save {
+        width: unset;
+      }
+    }
+  }
+}
+
+.inputName {
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+
+  .textCount {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #808689;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .rename-popup {
+    font-size: $px-14;
+  }
+
+  .content-top {
+    border-bottom: $px-2 solid #8bd4e9;
+    padding-bottom: $px-20;
+    gap: $px-20;
+
+    .ledger-content {
+      gap: $px-8;
+
+      span {
+        font-size: $px-14;
+      }
+    }
+  }
+
+  .content-bottom {
+    border-top: $px-2 solid #8bd4e9;
+
+    .btn-wrapper {
+      padding-top: $px-20;
+      gap: $px-10;
+    }
+  }
+
+  .inputName {
+    .textCount {
+      top: $px-11;
+      right: $px-15;
+      font-size: $px-14;
+    }
+  }
+}

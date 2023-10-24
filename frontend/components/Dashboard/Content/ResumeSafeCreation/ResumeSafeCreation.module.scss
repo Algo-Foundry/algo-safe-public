@@ -1,0 +1,471 @@
+.container {
+  p {
+    font-family: "DM Sans";
+    font-style: normal;
+    margin: 0;
+  }
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans";
+  font-style: normal;
+  margin: 0;
+
+  @media only screen and (min-width: 1600px) {
+    p {
+      font-size: $px-14 !important;
+    }
+  }
+}
+
+.btnResumeStyle {
+  font-family: "Poppins" !important;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.btnStyle {
+  width: 10px !important;
+
+  p {
+    font-family: "Poppins" !important;
+    font-style: normal;
+    margin: 0;
+  }
+}
+
+.childContent {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #8bd4e9;
+
+  p {
+    font-family: 'DM Sans' !important;
+    font-style: normal;
+    margin: 0;
+    font-size: 14px;
+  }
+  @media only screen and (min-width: 1600px) {
+    padding-bottom: $px-10;
+    border-bottom: $px-1 solid #8bd4e9;
+
+    p {      
+      font-size: $px-14;
+    }
+  }
+}
+
+.parentLeftItem {
+  display: flex;
+  width: 60%;
+}
+
+.parentRightItem {
+  display: flex;
+  width: 40%;
+}
+
+.childLeftItem {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: flex-start;
+
+  .textWrapper {
+    width: 50%;
+  }
+
+  .textWrapperLeft {
+    width: 40%;
+  }
+
+  .textWrapperRight {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-7;
+    }
+  }
+}
+
+.childRightItem {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+
+  .widthLeft {
+    width: 50%;
+  }
+
+  .widthRight {
+    width: 50%;
+  }
+}
+
+.headerTitle {
+  display: flex;
+  width: 100%;
+
+  p {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: #258bac;
+  }
+}
+
+.headerLeftText {
+  width: 26.6%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.headerBtnSpace {
+  width: 20%;
+}
+
+.flexWrapperText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7px;
+}
+
+.content {
+  max-width: 800px;
+  width: 80%;
+  padding: 20px;
+  margin-top: 30px;
+
+  @media only screen and (min-width: 1600px) {
+    max-width: $px-800;
+    padding: $px-20;
+    margin-top: $px-30;
+  }
+
+  &.noShadow {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .boxContent {
+    display: flex;
+    flex-direction: column;
+    gap: $px-20;
+    width: 100%;
+  }
+
+  .boxSafeListWrapper {
+    border-radius: 12px;
+    background: #e6f7fb;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @media only screen and (min-width: 1600px) {
+      border-radius: $px-8;
+    }
+
+    .boxSafeList {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .boxSafeList {
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #e6f7fb;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    @media screen and (min-width: 1600px) {
+      height: $px-400;
+      padding: $px-20 !important;
+      border-radius: $px-12;
+      gap: $px-17;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #b8e9f4;
+      border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb:hover {
+      background: #8bd4e9;
+      box-shadow: 0px 2px 2px rgba(60, 72, 72, 0.3);
+      border-radius: 20px;
+    }
+
+    .boxLoader {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .wrapLoader,
+      svg {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .wrapLoader,
+        svg {
+          width: 173.73px;
+          height: 173.73px;
+        }
+      }
+
+      .textLoader {
+        color: #42a1b6;
+        font-weight: bold;
+      }
+    }
+
+    .radioWrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #8bd4e9;
+      box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.25);
+
+      @media screen and (min-width: 1600px) {
+        padding-bottom: $px-16;
+        border-bottom: $px-2 solid #8bd4e9;
+        box-shadow: 0 $_px-1 $px-10 rgba(255, 255, 255, 0.25);
+        &.header {          
+          padding-bottom: $px-10;
+          border-bottom: $px-1 solid #8bd4e9;
+        }
+      }     
+
+      .textHeader {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        color: #258bac;
+
+        &:nth-child(1) {
+          padding-left: 44px;
+        }
+      }
+
+      .adrWrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        width: 30%;
+
+        &:nth-child(2) {
+          justify-content: flex-end;
+        }
+
+        &:nth-child(3) {
+          justify-content: flex-end;
+        }
+
+        &.gapBig {
+          gap: 10px;
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+        }
+      }
+
+      .wrapReadOnly {
+        padding: 2px 10px;
+        gap: 8px;
+        width: 69px;
+        height: 21px;
+        background: linear-gradient(315deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #c9cbd3;
+        background-blend-mode: soft-light, normal;
+        border-radius: 30px;
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.textHeader {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: #000000;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+  }
+}
+
+.textBold {
+  font-weight: bold !important;
+}
+
+.textStatusItem {
+  font-weight: bold !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .childLeftItem {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .textWrapper {
+      width: 100%;
+    }
+  }
+
+  .childRightItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    height: 100% !important;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .widthLeft {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .widthRight {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .content {
+    width: 100%;
+    border-radius: 0px !important;
+
+    &.noShadow {
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .boxSafeList {
+      height: 442px;
+
+      .radioWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 7px;
+        width: 100%;
+
+        &.header {
+          display: none;
+        }
+      }
+
+      .adrWrap {
+        top: 0;
+        width: 100% !important;
+        justify-content: flex-start !important;
+        font-family: "DM Sans";
+
+        &.mlMobile {
+          margin-left: 26px;
+        }
+      }
+    }
+  }
+
+  .childContent {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #8bd4e9;
+
+    p {
+      font-family: "Archivo" !important;
+      font-style: normal;
+      margin: 0;
+      font-size: 12px !important;
+    }
+  }
+
+  .btnStyle {
+    p {
+      font-family: "Poppins" !important;
+      font-style: normal;
+      margin: 0;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .textStatusItem {
+    font-weight: normal !important;
+    font-size: 12px !important;
+  }
+}
+
+.addrMobile {
+  display: none;
+
+  @media only screen and (max-width: 991px) {
+    display: flex;
+  }
+}
+
+.addrDesktop {
+  display: flex;
+
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
+}

@@ -1,0 +1,54 @@
+.safe-remove-popup {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Archivo';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 160%;
+    text-align: center;
+  }
+  
+  .content-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span.text-info {
+      margin-top: 20px;
+      width: 300px;
+      font-weight: 400;
+    }
+  }
+  
+  .content-bottom {
+    display: flex;
+    flex-direction: column;
+    .btn-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      .btn-cancel {
+        width: 100%;
+        order: 1;
+      }
+      .btn-proceed {
+        width: 100%;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 992px) { 
+    .content-bottom {
+      .btn-wrapper {
+        flex-direction: unset;
+        .btn-cancel {
+          width: unset;
+          order: 0;
+        }
+        .btn-proceed {
+          width: unset;
+        }
+      }
+  }
+  }

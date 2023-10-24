@@ -1,0 +1,370 @@
+.container {
+  p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    margin: 0;
+    font-size: 14px !important;
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14 !important;
+    }
+  }
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cosigner-optin {
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  margin-top: 30px;
+
+  &.noShadow {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    max-width: $px-800;
+    padding: $px-20;
+    margin-top: $px-30;
+  }
+}
+
+.cosigner-optin-desc {
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  &.noShadow {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    max-width: $px-800;
+    padding: $px-20;
+    margin-top: $px-30;
+    margin-bottom: $px-50;
+  }
+}
+
+.textBold {
+  font-weight: bold !important;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.foundrySafeContainer {
+  width: 40%;
+  padding: 5px;
+  padding-right: 15px;
+  border-right: 1px solid #8BD4E9;  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #8BD4E9;
+    padding-bottom: 10px;
+  }
+
+  .content {
+    margin-top: 10px;
+  }
+
+  .item {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media only screen and (min-width: 1600px) {
+    padding: $px-5;
+    padding-right: $px-15;
+    border-right: $px-1 solid #8BD4E9;
+    .header {
+      border-bottom: $px-1 solid #8BD4E9;
+      padding-bottom: $px-10;
+    }
+  
+    .content {
+      margin-top: $px-10;
+    }
+  
+    .item {
+      margin-top: $px-10;
+    }
+  }
+}
+
+.signerContainer {
+  width: 60%;
+  padding: 5px;
+  margin-left: 10px;
+
+  .header {
+    display: flex;
+    border-bottom: 1px solid #8BD4E9;
+    padding-bottom: 10px;
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .itemRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  @media only screen and (min-width: 1600px) {
+    padding: $px-5;
+    margin-left: $px-10;
+
+    .header {
+      border-bottom: $px-1 solid #8BD4E9;
+      padding-bottom: $px-10;
+    }
+
+    .item {
+      margin-top: $px-10;
+    }
+
+    .itemRight {
+      gap: $px-5;
+    }
+  }
+}
+
+.textDescription {
+  margin-bottom: 20px !important;
+
+  .optIn {
+    font-weight: bold;
+  }
+
+  .popUp {
+    color: #258BAC;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  @media only screen and (min-width: 1600px) {
+    margin-bottom: $px-20 !important;
+  }
+}
+
+.textBottomDesc {
+  display: flex;
+  gap: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media only screen and (min-width: 1600px) {
+    gap: $px-100;
+    margin-top: $px-20;
+    margin-bottom: $px-20;
+  }
+}
+
+.footerContentDesktop {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  padding-bottom: 0px;
+  @media only screen and (min-width: 1600px) {
+    gap: $px-30;
+    margin-top: $px-20;
+  }
+}
+
+.btnOptInPos {
+  margin-top: 0px;
+
+  p {
+    font-family: Poppins !important;
+    font-weight: 600;
+    font-size: 14px !important;
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14 !important;
+    }
+  }
+}
+
+.btnBackPos {
+  p {
+    font-family: Poppins !important;
+    font-weight: 600;
+    font-size: 14px !important;
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .cosigner-optin {
+    width: 100%;
+    border-radius: 0px !important;
+
+    &.noShadow {
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .foundrySafeContainer {
+    width: 100%;
+    padding: 5px;
+    padding-right: 0px;
+    border-right: 0px solid #8BD4E9;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #8BD4E9;
+      padding-bottom: 10px;
+    }
+
+    .content {
+      margin-top: 10px;
+    }
+
+    .item {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .signerContainer {
+    width: 100%;
+    padding: 5px;
+    margin-left: 0px;
+
+    .header {
+      display: flex;
+      border-top: 1px solid #8BD4E9;
+      border-bottom: 0px solid #8BD4E9;
+      padding-top: 10px;
+      padding-bottom: 0px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .itemRight {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
+      }
+    }
+  }
+
+  .cosigner-optin-desc {
+    width: 100%;
+    border-radius: 0px !important;
+    padding: 20px;
+    margin-bottom: 50px;
+
+    &.noShadow {
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  .footerContentDesktop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    padding-bottom: 70px;
+    position: relative;
+  }
+
+  .btnOptInPos {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+
+    p {
+      font-family: Poppins !important;
+      font-weight: 600;
+    }
+  }
+
+  .btnBackPos {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+
+    p {
+      font-family: Poppins !important;
+      font-weight: 600;
+    }
+  }
+}
+
+.ledgerContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+
+  p {
+    color: #258BAC;
+    font-size: 14px !important;
+    font-family: DM Sans !important;
+  }
+
+  .imgWrapper {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    margin-top: $px-15;
+
+    .imgWrapper {
+      width: $px-40;
+      height: $px-40;
+      margin-right: $px-10;
+    }
+
+    p {
+      font-size: $px-14 !important;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.modalMigrateCont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;  
+  .boxContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center; 
+    gap: 15px;
+    font-family: 'Archivo';
+    font-style: normal;
+    color: #1C6ECD;
+    svg {
+      width: 100px;
+      height: auto;
+    }
+    .boxDescribe {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;            
+      text-align: center;
+      color: #000000;
+      &.link {
+        color: #258BAC;
+        margin-top: 5px;
+        text-decoration: underline;
+      }
+      .detailInfo {
+        display: flex;
+        flex-direction: column;
+        ul {
+          margin: 0;
+          margin-top: 10px;
+          text-align: start;
+          height: 50px;
+          overflow: auto;
+          li {
+            width: 242px;
+          }
+        }
+        @media only screen and (min-width: 992px){
+          ul li {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .txContent {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      justify-content: center;
+      align-items: center;
+      .textModal {
+        text-align: center;   
+        font-family: $font-regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #000000;
+        &.big {
+          font-size: 14px;
+        }
+        img {
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+        }        
+      }
+    }    
+    .collapse {
+      color: #258BAC;
+      cursor: pointer;
+      text-decoration: underline;
+      img {
+        width: 20px;
+        height: 20px;
+        margin-top: -3px;
+        &.rotate {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px){
+  .modalMigrateCont {
+    .boxContent {
+      gap: $px-15;
+      svg {
+        width: $px-100;
+      }
+      .boxDescribe {
+        font-size: $px-14;                
+        &.link {
+          margin-top: $px-5;                    
+        }
+      }
+    }
+  }
+}

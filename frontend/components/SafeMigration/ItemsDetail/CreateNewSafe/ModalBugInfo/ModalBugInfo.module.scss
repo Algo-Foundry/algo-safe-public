@@ -1,0 +1,20 @@
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-regular;
+  font-size: 14px;
+  line-height: 160%;
+  color: #000000;
+  .icon{
+    color: #E15173;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    svg{
+      width: 100px;
+      height: auto;
+    }
+  }
+  b {
+    margin-bottom: 10px;
+  }
+}

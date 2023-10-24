@@ -1,0 +1,13 @@
+@import "bootstrap/scss/functions"; 
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+/* Your customizations here */
+$enable-negative-margins: true;
+
+$dropdown-link-active-bg: #258BAC;
+$dropdown-link-active-color: #000000;
+$dropdown-link-hover-bg: rgb(37, 139, 172, 0.1);
+
+
+@import "bootstrap";

@@ -1,0 +1,126 @@
+.welcome__box-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  width: 376.67px;
+  min-height: 189px;
+  background: #FFFDFD;
+  border: 0.914163px solid rgba(75, 112, 241, 0.06);
+  border-radius: 18px;
+  &.wider{
+    width: 383px;
+  }
+  @media only screen and (max-width: 370px) {
+    padding: 12px 10px !important;    
+  }
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-10;
+    width: $px-376;
+    min-height: $px-189;
+    border-radius: $px-18;
+    padding: $px-20;
+    &.wider{
+      width: $px-383;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-10;
+    }
+  }
+
+  label {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #3D3D3D;
+
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-18;
+      line-height: 120%;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 12px !important;
+    }
+  }
+
+  span {
+    font-family: 'DM Sans';
+    font-size: 14px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: #258BAC;
+  }
+
+  img {
+    width: 62.16px;
+    height: 62.16px;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-62;
+      height: $px-62;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .welcome__box-btn {
+    flex-direction: column;
+    padding: 12px;
+    height: unset;
+    min-height: 116px;
+    width: 48% !important;
+    border-radius: 12px;
+    align-items: unset;
+    gap: 10px;
+
+    .text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 6px;
+    }
+
+    img {
+      width: auto;
+      height: 40px;
+    }
+
+    label {
+      font-size: 14px;
+      line-height: 150%;
+      text-align: left;
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 160%;
+      text-align: left;
+      margin-top: -10px;
+    }
+  }
+}

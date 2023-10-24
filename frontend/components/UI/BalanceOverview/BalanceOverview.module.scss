@@ -1,0 +1,414 @@
+.wrapper {
+  max-width: 650px;
+  min-height: 91px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(91, 91, 91, 0.1);
+  padding: 16px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+
+  img.label-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  img.label-img-desktop {
+    width: 52px;
+    height: 52px;
+  }
+
+  label {
+    color: #258BAC;
+  }
+
+  @media only screen and (min-width: 728px) {
+    border-radius: 20px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    max-width: unset;
+    display: flex;
+    justify-content: center;
+    box-shadow: none;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    max-width: $px-650;
+    min-height: $px-91;
+    box-shadow: 0px $px-4 $px-8 rgba(91, 91, 91, 0.1);
+    border-radius: $px-20;
+    padding: $px-16;
+    font-size: $px-18;
+
+    img.label-img {
+      width: $px-30;
+      height: $px-30;
+    }
+
+    img.label-img-desktop {
+      width: $px-52;
+      height: $px-52;
+    }
+
+  }
+}
+
+.borderRadiusSafe {
+  border-radius: 12px 0px 0px 12px;
+
+  @media only screen and (max-width: 991px) {
+    border-radius: 0px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    border-radius: $px-12 0px 0px $px-12;
+  }
+}
+
+.borderRadiusLedger {
+  border-radius: 12px;
+  padding: 16px !important;
+
+  @media only screen and (max-width: 991px) {
+    border-radius: 0px;
+    padding: 16px 0 !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    border-radius: $px-12;
+    padding: $px-16 !important;
+  }
+}
+
+.wrapperNew {
+  min-width: 480px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(91, 91, 91, 0.1);
+  padding: 0px 16px 0px 16px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+
+  @media only screen and (max-width: 1110px) {
+    width: 100%;
+    min-width: unset;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    box-shadow: none;
+    padding: 8px 0px 8px 0px;
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1110px) {
+    width: 50%;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1110px) {    
+    padding: 16px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    @media only screen and (min-width: 992px) and (max-width: 1110px) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 991px) {
+      width: 100% !important;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    @media only screen and (min-width: 1600px) {
+      gap: $px-10;
+    }
+
+    @media only screen and (max-width: 768px) {
+      padding: 0px 10px 0px;
+    }
+  }
+
+  img.label-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  img.label-img-desktop {
+    width: 52px;
+    height: 52px;
+  }
+
+  label {
+    color: #258BAC;
+  }
+
+  @media only screen and (max-width: 991px) {
+    max-width: unset;
+    display: flex;
+    justify-content: center;
+    box-shadow: none;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    min-width: $px-480;
+    box-shadow: 0px $px-4 $px-8 rgba(91, 91, 91, 0.1);
+    padding: $px-16;
+    font-size: $px-18;
+
+    img.label-img {
+      width: $px-30;
+      height: $px-30;
+    }
+
+    img.label-img-desktop {
+      width: $px-52;
+      height: $px-52;
+    }
+
+  }
+}
+
+.address-box {
+  min-width: 306px;
+  height: 59px;
+  background: linear-gradient(315deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #EDEEF2;
+  background-blend-mode: soft-light, normal;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 8px;
+  gap: 4px;
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 12px;
+    align-items: center;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    min-width: $px-306;
+    height: $px-59;
+    border-radius: $px-8;
+    padding: 0 $px-8;
+    gap: $px-4;
+  }
+}
+
+.address-text {
+  span {
+    font-family: 'DM Sans' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px !important;
+    line-height: 140%;
+    color: #000000;
+
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-14 !important;
+    }
+  }
+}
+
+.desktopVer {
+  display: flex;
+  width: 100%;
+}
+
+.mobileVer {
+  display: none;
+
+  @media only screen and (max-width: 991px) {
+    display: block;
+  }
+}
+
+.balanceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;    
+  @media only screen and (max-width: 991px) {
+    flex-direction: column;
+    row-gap: 3px;
+    column-gap: 20px;
+    align-items: flex-start;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    font-family: 'Poppins' !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    margin: 0 !important;
+    &.small{
+      @media only screen and (max-width: 991px) {
+        font-size: 9px !important;        
+      }  
+    }
+
+    @media only screen and (max-width: 991px) {
+      font-size: 14px !important;
+      gap: 10px !important;
+      word-break: break-all;
+    }
+
+    @media only screen and (min-width: 1600px) {
+      font-size: $px-18 !important;
+      gap: $px-20 !important;
+    }
+  }
+}
+
+.amountWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .iconWrapper {
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        .boxTooltips {
+          display: flex;
+        }
+      }
+
+      .boxTooltips {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 50%;
+        padding: 2px 6px;
+        gap: 20px;
+        box-shadow: 0px 0px 4px 0px rgba(111, 111, 111, 0.30);
+        background: var(--grey-2, linear-gradient(315deg, rgba(0, 0, 0, 0.60) 0%, rgba(255, 255, 255, 0.00) 100%), #EDEEF2);
+        background-blend-mode: soft-light, normal;
+        border-radius: 8px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 160%;
+        color: #000000;
+        z-index: 99;
+
+        @media only screen and (min-width: 1600px) {
+          padding: $px-2 $px-6;
+          gap: $px-20;
+          border-radius: $px-8;
+          font-size: $px-10;
+        }
+      }
+
+      .iconStyles {
+        width: 38px;
+        height: 38px;
+
+        @media only screen and (max-width: 991px) {
+          width: 30px;
+          height: 30px;
+        }
+
+        @media only screen and (min-width: 1600px) {
+          width: $px-38;
+          height: $px-38;
+        }
+      }
+    }
+  }
+}
+
+.balanceText {
+  font-family: 'Poppins' !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 24px !important;
+  line-height: 140%;
+  color: #258BAC;
+  margin: 0 !important;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-24 !important;
+  }
+}
+
+.gapWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-4;
+  }
+}
+
+.activeSigner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0px 4px 8px rgba(91, 91, 91, 0.1);
+  padding: 16px;
+  gap: 5px;
+  width: 329px;
+  background: #B8E9F4;
+  border-radius: 0px 12px 12px 0px;
+
+  @media only screen and (max-width: 1110px) {
+    width: 100%;
+    border-radius: 0;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1110px) {
+    width: 50%;
+    border-radius: 0px 12px 12px 0px;
+  }
+
+  p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 !important;
+  }
+
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-329;
+    padding: $px-16;
+    gap: $px-5;
+    border-radius: 0px $px-12 $px-12 0px;
+
+    p {
+      font-size: $px-14;
+    }
+  }
+}
+
+.disabledBtn {
+  pointer-events: none;
+}
+
+.disabledColor {
+  color: #B3B3B3 !important;
+}

@@ -1,0 +1,685 @@
+.btnAdd {
+  p {
+    font-family: 'Poppins' !important;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    p {
+      font-size: $px-14;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.disableText {
+  color: #cbd0d0 !important;
+}
+
+.valueBold {
+  font-family: 'DM Sans' !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  margin: 0 !important;
+  color: #000000 !important;
+  font-size: 14px !important;
+}
+
+.headerTitle {
+  display: flex;
+  width: 100%;
+  margin-left: 15px;
+
+  p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: #258BAC;
+  }
+
+  &.withBorder {
+    padding: 14px 0;
+    border-bottom: 1px solid #8BD4E9;
+    border-top: 1px solid #8BD4E9;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    p {
+      font-size: $px-14 !important;
+    }
+
+    &.withBorder {
+      padding: $px-14 0;
+      border-bottom: $px-1 solid #8BD4E9;
+      border-top: $px-1 solid #8BD4E9;
+    }
+  }
+}
+
+.addressRename {
+  width: 35%;
+}
+
+.appIdRename {
+  width: 25%;
+}
+
+.nameRename {
+  position: relative;
+  width: 40%;
+
+  .textCount {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 160%;
+    color: #808689;
+  }
+  .textErr{
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 160%;
+    text-align: left;
+    color: #E15173;
+    word-break: break-all;
+    width: 100%;
+    position: absolute;
+    top: 105%;
+    left: 0;
+  }
+}
+
+.bodyTitle {
+  display: flex;
+  width: 100%;
+  margin-left: 15px;
+  justify-content: space-between;
+  @media only screen and (min-width: 1600px) {
+    margin-left: $px-15;
+  }
+
+  p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: #258BAC;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    p {
+      font-size: $px-14 !important;
+    }
+  }
+}
+
+.headerLeftText {
+  width: 50%;
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.headerMiddleText {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7px;
+  @media only screen and (min-width: 1600px) {
+    gap: $px-7;
+  }
+}
+
+.addrTextDesktop {
+  display: flex;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.addrTextDesktopMobile {
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.headerRightText {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+  @media only screen and (min-width: 1600px) {
+    gap: $px-7;
+  }
+}
+
+.add-load-safe {
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  margin-top: 30px;
+
+  &.noShadow {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .boxContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .boxSafeListWrapper {
+    border-radius: 12px;
+    background: #E6F7FB;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .boxSafeList {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .boxSafeList {
+    width: 100%;
+    height: 320px;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #E6F7FB;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #B8E9F4;
+      border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb:hover {
+      background: #8BD4E9;
+      box-shadow: 0px 2px 2px rgba(60, 72, 72, 0.3);
+      border-radius: 20px;
+    }
+
+    &.rename {
+      background: #FFFFFF;
+      border-radius: 0;
+      padding: 12px 0;
+      gap: 23px;
+    }
+
+    .boxLoader {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .wrapLoader,
+      svg {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media only screen and (min-width: 768px) {
+
+        .wrapLoader,
+        svg {
+          width: 173.73px;
+          height: 173.73px;
+        }
+      }
+
+      .textLoader {
+        color: #42A1B6;
+        font-weight: bold;
+      }
+    }
+
+    .radioWrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #8BD4E9;
+      box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.25);
+
+      &.header {
+        border-bottom: none;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #8BD4E9;
+      }
+
+      .textHeader {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        color: #258BAC;
+
+        &:nth-child(1) {
+          padding-left: 44px;
+        }
+
+        @media only screen and (min-width: 1600px) {
+          font-size: $px-18;
+        }
+      }
+
+      .adrWrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        width: 30%;
+
+        &:nth-child(2) {
+          justify-content: flex-end;
+        }
+
+        &:nth-child(3) {
+          justify-content: flex-end;
+        }
+
+        &.gapBig {
+          gap: 10px;
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+        }
+      }
+
+      .wrapReadOnly {
+        padding: 2px 10px;
+        gap: 8px;
+        width: 69px;
+        height: 21px;
+        background: linear-gradient(315deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #C9CBD3;
+        background-blend-mode: soft-light, normal;
+        border-radius: 30px;
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  .boxInputAdr {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding-left: 20px;
+
+    .inputAdr {
+      margin-left: auto;
+      max-width: calc(100% - 20px);
+    }
+  }
+
+  .textBold {
+    font-weight: bold;
+  }
+
+  .textContent {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #000000;
+
+    img {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    &.bold,
+    .bold {
+      font-weight: 700;
+      text-align: center;
+
+      &.blue {
+        color: $primary-color;
+      }
+    }
+
+    .detail {
+      font-weight: 400;
+      font-size: 11px;
+      color: #B3B3B3;
+    }
+  }
+
+  .boxDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    margin: 0;
+  }
+
+  .spanLink {
+    font-family: 'DM Sans';
+    font-style: normal;
+    color: #258BAC;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+.textHeader {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: #000000;
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $px-14;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .headerTitle {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 15px;
+
+    &.withBorder {
+      display: flex;
+      flex-direction: row;
+    }
+
+    p {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      color: #258BAC;
+    }
+  }
+
+  .bodyTitle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 15px;    
+
+    p {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      color: #258BAC;
+    }
+  }
+
+  .headerRightText {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .add-load-safe {
+    padding: 20px;
+    min-width: unset;
+    width: 100%;
+    border-radius: 0px !important;
+
+    .textContent {
+      font-size: 12px;
+    }
+
+    .boxSafeList {
+      height: 242px;
+
+      .radioWrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 7px;
+        width: 100%;
+
+        // &.header {
+        //   display: none;
+        // }
+      }
+
+      .adrWrap {
+        top: 0;
+        width: 100% !important;
+        justify-content: flex-start !important;
+        font-family: 'DM Sans';
+
+        &.mlMobile {
+          margin-left: 26px;
+        }
+      }
+    }
+  }
+
+  .addressRename {
+    width: 45%;
+  }
+
+  .appIdRename {
+    display: none;
+  }
+
+  .nameRename {
+    width: 55%;
+  }
+}
+.pInput{
+  padding-right: 50px !important;
+}
+
+@media only screen and (min-width: 1600px) {
+  .nameRename {
+    .textCount {
+      top: $px-11;
+      right: $px-15;
+      font-size: $px-11;
+    }
+  }
+
+  .add-load-safe {
+    min-width: $px-800;
+    padding: $px-20;
+
+    .boxContent {
+      gap: $px-20;
+    }
+
+    .boxSafeListWrapper {
+      border-radius: $px-12;
+      padding-top: $px-16;
+      padding-bottom: $px-16;
+    }
+
+    .boxSafeList {
+      height: $px-320;
+      padding: $px-20;
+      border-radius: $px-12;
+      gap: $px-17;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 20px;
+      }
+
+      &::-webkit-scrollbar-thumb,
+      &::-webkit-scrollbar-thumb:hover {
+        box-shadow: 0px 2px 2px rgba(60, 72, 72, 0.3);
+        border-radius: 20px;
+      }
+
+      &.rename {
+        border-radius: 0;
+        padding: $px-12 0;
+        gap: $px-23;
+      }
+
+      .boxLoader {
+
+        .wrapLoader,
+        svg {
+          width: 12.064583333333333vw;
+          height: 12.064583333333333vw;
+        }
+      }
+
+      .radioWrap {
+        padding-bottom: $px-16 !important;
+        border-bottom: $px-1 solid #8BD4E9 !important;
+        box-shadow: 0px $_px-1 $px-10 rgba(255, 255, 255, 0.25);
+
+        .textHeader {
+          font-size: $px-18;
+
+          &:nth-child(1) {
+            padding-left: $px-44;
+          }
+        }
+
+        .adrWrap {
+          gap: $px-6;
+
+          &.gapBig {
+            gap: $px-10;
+          }
+
+          img {
+            width: $px-16;
+            height: $px-16;
+          }
+        }
+
+        .wrapReadOnly {
+          padding: $px-2 $px-10;
+          gap: $px-8;
+          width: $px-69;
+          height: $px-21;
+          border-radius: $px-30;
+          font-size: $px-12;
+        }
+      }
+    }
+
+    .boxInputAdr {
+      gap: $px-8;
+      padding-left: $px-20;
+
+      .inputAdr {
+        max-width: calc(100% - $px-20);
+      }
+    }
+
+    .textContent {
+      font-size: $px-14;
+
+      img {
+        width: $px-16;
+        height: $px-16;
+      }
+
+      .detail {
+        font-size: $px-11;
+      }
+    }
+  }
+  .pInput{
+    padding-right: $px-50 !important;
+  }
+}
+
+.checkboxInput {
+  width: 15px;
+  height: 15px;
+
+  @media screen and (max-width: 991px) {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    width: $px-15;
+    height: $px-15;
+  }
+}
+
+.headerTitleMobile {
+  display: none;
+
+  @media only screen and (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+
+    p {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+}

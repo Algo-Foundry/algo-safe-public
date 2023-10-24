@@ -1,0 +1,21 @@
+.iconImg{
+    width: 16px;
+    height: 16px; 
+    cursor: pointer;
+    @media only screen and (min-width: 1600px) {
+        width: $px-16;
+        height: $px-16;
+      }
+    &.small{
+      width: 13px;
+      height: 13px; 
+      
+      @media only screen and (min-width: 1600px) {
+          width: $px-13;
+          height: $px-13;
+        }
+    }
+}
+.textDisabled{
+  filter: invert(100%) sepia(1%) saturate(1801%) hue-rotate(148deg) brightness(82%) contrast(100%);
+}

@@ -1,0 +1,23 @@
+.add-accounts {
+  margin-top: 40px;
+  width: 100% !important;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+
+  @media only screen and (min-width: 1600px) {
+    margin-top: $px-60;
+    gap: $px-25;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

@@ -1,0 +1,73 @@
+.safe-name{
+    justify-content: start;
+    align-items: stretch;
+    min-width: 800px;
+    padding: 20px;
+    border-radius: 12px;
+    .boxContent{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .inputSafe{
+        position: relative;
+        width: 100%;
+        .textCount{
+            position: absolute;
+            top: 42px;
+            right: 15px;
+            font-family: $font-regular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 160%;            
+            color: #808689;
+        }
+    }
+    .textContent{
+        font-family: $font-regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #000000;        
+        span, a{
+            color: $primary-color;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .safe-name{
+        min-width: unset;
+        width: 100%;
+        border-radius: 0;
+        .textContent{
+            font-size: 12px;
+        }
+    }
+    
+}
+
+@media only screen and (min-width: 1600px) {
+    .safe-name{        
+        min-width: $px-800;
+        padding: $px-20;
+        border-radius: $px-12;
+        .boxContent{            
+            gap: $px-30;
+        }
+        .inputSafe{
+            .textCount{                
+                top: $px-42;
+                right: $px-15;                
+                font-size: $px-11;                
+            }
+        }
+        .textContent{            
+            font-size: $px-14;            
+        }
+    }
+}

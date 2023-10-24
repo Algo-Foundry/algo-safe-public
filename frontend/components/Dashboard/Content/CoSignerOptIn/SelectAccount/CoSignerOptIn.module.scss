@@ -1,0 +1,160 @@
+.container {
+  p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    margin: 0;
+  }
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 800px;
+  width: 80%;
+  padding: 20px;
+  margin-top: 30px;
+
+  &.noShadow {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+.titleField {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    font-size: 14px !important;
+  }
+  @media only screen and (min-width: 1600px) {
+    gap: $px-8;
+    p {
+      font-size: $px-14 !important;
+    }
+  }
+}
+
+.textBold {
+  font-weight: bold !important;
+}
+
+.inputSafeId {
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (min-width: 1600px) {
+    gap: $px-20;
+  }
+}
+
+.inputText {
+  width: 83%;
+  border-radius: 8px;
+  background: #E6F7FB;
+  font-family: 'DM Sans';
+  font-style: normal;
+  margin: 0;
+  padding: 7px 10px 7px 10px;
+  border: none;
+  height: 40px;
+  @media only screen and (min-width: 1600px) {
+    height: $px-40;
+    gap: $px-5;
+    // padding: $px-7_5 auto;
+    padding: $px-7 $px-10;
+    border-radius: $px-8;
+    font-size: $px-14;
+  }
+   
+}
+
+.inputText:focus {
+  outline: none;
+  border: none;
+}
+
+.mlDivider {
+  display: none;
+}
+
+.btnConfirm {
+  p {
+    font-family: 'Poppins' !important;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    width: 100%;
+    border-radius: 0px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &.noShadow {
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  .inputSafeId {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .inputText {
+    width: 100%;
+    border-radius: 8px;
+    background: #E6F7FB;
+    font-family: 'DM Sans';
+    font-style: normal;
+    margin: 0;
+    padding: 7px 10px 7px 10px;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  .btnConfirm {
+    width: 100%;
+    margin-top: 10px;
+
+    p {
+      font-family: 'Poppins' !important;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      align-items: center;
+    }
+  }
+
+  .mlDivider {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .wrapper {
+    max-width: $px-800;
+    padding: $px-20;
+    margin-top: $px-30;
+  }
+
+  .inputText {
+    font-size: $px-14 !important;
+  }
+}

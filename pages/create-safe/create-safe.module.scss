@@ -1,0 +1,63 @@
+.mainSafe {
+    width: 800px;
+    margin-top: 30px;
+
+    .mainContent {
+        // margin-top: 20px;
+        margin-bottom: 100px;
+    }
+
+    .boxProgress {
+        margin-top: 1.5rem;
+    }
+}
+
+.paddingCreate {
+    padding: 20px;
+    padding-top: 0px;
+}
+
+@media only screen and (max-width: 991px) {
+    .paddingCreate {
+        padding: 0;
+    }
+
+    .mainSafe {
+        width: 100%;
+        // margin-top: 34px;
+        padding: 0;
+
+        .mainContent {
+            margin-bottom: 0px;
+            margin-top: 12px;
+
+            @media only screen and (min-width: 576px) {
+                margin-top: 25px;
+            }
+        }
+
+        .boxProgress {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .paddingCreate {
+        padding: $px-20;
+    }
+
+    .mainSafe {
+        width: $px-800;
+        margin-top: $px-30;
+
+        .mainContent {
+            // margin-top: $px-20;
+            margin-bottom: $px-100;
+        }
+
+        .boxProgress {
+            margin-top: $px-10;
+        }
+    }
+}

@@ -1,0 +1,210 @@
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  p {
+    font-family: 'DM Sans' !important;
+    font-style: normal !important;
+    font-size: 14px;
+    margin: 0 !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    p {
+      font-size: $px-14;
+    }
+  }
+}
+
+.btnContainer {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+
+  @media only screen and (min-width: 1600px) {
+    gap: $px-12;
+  }
+}
+
+.btnGoToSafe {
+  width: 100% !important;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-family: Poppins !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    p {
+      font-size: $px-14 !important;
+    }
+  }
+}
+
+.modalTx {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  .iconModal {
+    width: 100px;
+    height: 100px;
+
+    @media only screen and (min-width: 1600px) {
+      width: $px-100;
+      height: $px-100;
+    }
+  }
+
+  .wrapText {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    width: 100%;
+  }
+
+  .textModal {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #000000;
+
+    p {
+      font-family: "DM Sans" !important;
+      font-size: 14px !important;
+      margin: 0 !important;
+    }
+
+    @media only screen and (min-width: 1600px) {
+      p {
+        font-size: $px-14 !important;
+      }
+    }
+
+    &.big {
+      font-size: 14px;
+
+      @media only screen and (min-width: 1600px) {
+        font-size: $px-14;
+      }
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+
+      @media only screen and (min-width: 1600px) {
+        width: $px-16;
+        height: $px-16;
+      }
+    }
+  }
+
+  .bold {
+    font-weight: 700;
+  }
+
+  .collapse {
+    color: #258BAC;
+    cursor: pointer;
+    text-decoration: underline;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-top: -3px;
+
+      &.rotate {
+        transform: rotate(180deg);
+      }
+
+      @media only screen and (min-width: 1600px) {
+        width: $px-20;
+        height: $px-20;
+        margin-top: $_px-3;
+      }
+    }
+  }
+
+  .txContent {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (min-width: 1600px) {
+      margin-top: $px-20;
+      gap: $px-4;
+    }
+  }
+
+  .errorDetailsWrapper {
+    margin-top: 10px;
+    width: 100%;
+    padding: 16px;
+
+    background: $blue-5;
+    border-radius: 12px;
+
+    @media only screen and (min-width: 1600px) {
+      margin-top: $px-10;
+      padding: $px-16;
+      border-radius: $px-12;
+    }
+  }
+
+  .errorDetails {
+    max-height: 312px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    word-break: break-word;
+
+    @media only screen and (min-width: 1600px) {
+      max-height: $px-312;
+      gap: $px-10;
+      font-size: $px-14;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .modalSafeCont {
+    .textModal {
+      text-align: center;
+    }
+  }
+
+  .btnContainer {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto
+  }
+}

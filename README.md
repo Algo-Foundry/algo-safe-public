@@ -9,20 +9,17 @@ Check out Algo Safe [here](https://safe.algofoundry.studio/)!
 1. Cloning the project
 
 - Clone to your local machine by using git clone or the Github GUI.
-
-1. Installing the packages
-
 - Navigate to the local cloned repository and run the following command.
 
 ```
   yarn install
 ```
 
-3. Set up the .env file
+2. Set up the .env file
 
 - Follow the instructions [here](envSetUp.md).
 
-4. Run development
+3. Run development
 
 ```
   yarn dev
